@@ -1,0 +1,52 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Presentation:war exploded">
+    <output-path>$PROJECT_DIR$/Presentation/target/Presentation-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Presentation" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="ServicesAgrocultural-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ServicesAgrocultural" />
+          </element>
+          <element id="archive" name="AccessData-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="AccessData" />
+          </element>
+          <element id="archive" name="Domain-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="Domain" />
+          </element>
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jdbc-core:1.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.0.3.RELEASE" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:sqljdbc:4.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.1.RELEASE" />
+          <element id="archive" name="DataTransferObject-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="DataTransferObject" />
+          </element>
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.7" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.0.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.1.6.RELEASE" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Presentation/target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="Presentation/web/Web" />
+    </root>
+  </artifact>
+</component>
