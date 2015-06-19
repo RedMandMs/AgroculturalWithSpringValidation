@@ -2590,3 +2590,135 @@ INFO RunLevelControllerThread-1434714658205 org.springframework.web.servlet.Disp
 INFO admin-listener(3) org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Jun 19 14:51:04 MSK 2015]; root of context hierarchy
 INFO admin-listener(3) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
 INFO admin-listener(3) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO RunLevelControllerThread-1434723051041 org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Jun 19 14:51:09 MSK 2015]; root of context hierarchy
+INFO RunLevelControllerThread-1434723059524 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO RunLevelControllerThread-1434723059524 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 32 ms
+INFO admin-listener(3) org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Jun 19 17:11:07 MSK 2015]; root of context hierarchy
+INFO admin-listener(3) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO admin-listener(3) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 47 ms
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=78, name='UserCompany2', inn=365554546}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo3', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Fo4', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(5) org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+INFO http-listener-1(5) org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+INFO admin-listener(1) org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Jun 19 17:12:15 MSK 2015]; root of context hierarchy
+INFO admin-listener(1) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO admin-listener(1) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 47 ms
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(3) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-listener-1(2) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-listener-1(4) org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+INFO http-listener-1(4) org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+INFO admin-listener(5) org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Fri Jun 19 17:16:54 MSK 2015]; root of context hierarchy
+INFO admin-listener(5) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO admin-listener(5) org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 47 ms
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(5) ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}
+INFO http-listener-1(1) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}
+INFO http-listener-1(2) org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+INFO http-listener-1(2) org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}
+INFO http-listener-1(4) ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1069, idOwner=91, cadastrNumber=4}

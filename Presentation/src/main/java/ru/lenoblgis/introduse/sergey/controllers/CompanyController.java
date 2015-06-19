@@ -106,7 +106,6 @@ public class CompanyController {
 		if(rightTry != null){
 			session.removeAttribute("changeOrganizationInfo");
 			myCompany = (OrganizationInfo) session.getAttribute("incorrectCompany");
-			session.setAttribute("editOrganizationErors", getErorRegistration(myCompany.getListEror()));
 		}else{
 			session.removeAttribute("editOrganizationErors");
 			message = "Измените необходимые данные";

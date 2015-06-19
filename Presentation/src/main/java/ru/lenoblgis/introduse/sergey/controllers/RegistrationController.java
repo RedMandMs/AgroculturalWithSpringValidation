@@ -53,14 +53,12 @@ public class RegistrationController {
 		
 		OrganizationInfo regestratingCompany = userService.registration(userOrganization);
 		
-		if(regestratingCompany.getListEror().isEmpty()){
+		if(regestratingCompany.getId() != null){
 			session.removeAttribute("uncorrectRegistrationUserCompany");
 			session.removeAttribute("listErorRegistration");
 			return "redirect:/login";
 		}
-		
 		session.setAttribute("uncorrectRegistrationUserCompany", userOrganization);
-		session.setAttribute("listErorRegistration", CompanyController.getErorRegistration(regestratingCompany.getListEror()));
 		
 		return "redirect:/registration";
 	}

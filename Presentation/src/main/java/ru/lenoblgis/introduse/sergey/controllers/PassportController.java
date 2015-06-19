@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -86,7 +88,6 @@ public class PassportController {
 			session.removeAttribute("changePassportInfo");
 			changedPassport = (PassportInfo) session.getAttribute("incorrectPassport");
 			session.removeAttribute("incorrectPassport");
-			session.setAttribute("messagesEditPassportEror", getPassportEror(changedPassport.getListEror()));
 		}else{
 			session.removeAttribute("messagesEditPassportEror");
 			changedPassport = passportService.reviewPassport(passportId, myCompany);
@@ -110,12 +111,16 @@ public class PassportController {
 	 * @return - путь к запрашиваемому ресурсу
 	 */
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
-    public String editPassport(PassportInfo changedPassport, ModelMap model) {
+    public String editPassport(@Validated PassportInfo changedPassport, ModelMap model, BindingResult result) {
+		
+		if(result.hasErrors()){
+			System.out.println();
+		}
 		
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpSession session = attr.getRequest().getSession(true); // true == allow create
 		
-		if(passportService.editPassport(changedPassport).getListEror() == null){
+		if(passportService.editPassport(changedPassport)){
 			List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
 			for(int i = 0; i < myPassportList.size(); i++){
 				if((myPassportList.get(i).equals(changedPassport))){
@@ -152,7 +157,6 @@ public class PassportController {
 			model.addAttribute("message", "Введите данные о новом пасспорте");
 		}else{
 			session.removeAttribute("incorrectPassport");
-			session.setAttribute("messagesCreateEror", getPassportEror(createdPassport.getListEror()));
 		}
 		model.addAttribute("createdPassport", createdPassport);
 		

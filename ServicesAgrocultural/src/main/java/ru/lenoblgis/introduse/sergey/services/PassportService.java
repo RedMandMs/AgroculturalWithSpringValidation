@@ -58,20 +58,20 @@ public class PassportService implements Serializable {
 	/**
 	 * Редактировать пасспорт
 	 * @param passportInfo - изменяемый паспорт с новыми параметрами
-	 * @return - новый, изменённый паспорт (если не изменилось, то со списком ошибок)
+	 * @return - спешно ли отредактирован паспорт
 	 */
-	public PassportInfo editPassport(PassportInfo passportInfo){
+	public boolean editPassport(PassportInfo passportInfo){
 		
 		Passport passport = converDTOtoDomain(passportInfo);
 		try{
 			dao.editPassport(passport);;
-			return passportInfo;
+			return true;
 		}catch(DuplicateKeyException duplicateEx){
 			System.out.println("Дублирование!!!");
-			return passportInfo;
+			return false;
 		}catch(DataIntegrityViolationException ex){
 			System.out.println("Внешний ключ!!!");
-			return passportInfo;
+			return false;
 		}
 	}
 	

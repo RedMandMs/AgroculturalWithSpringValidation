@@ -1,7 +1,6 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.passportinfo;
 
 import java.io.Serializable;
-import java.util.List;
 
 
 public class PassportInfo implements Serializable{
@@ -97,10 +96,6 @@ public class PassportInfo implements Serializable{
 	 */
 	private String comment;
 	
-	/**
-	 * Список ошибок
-	 */
-	private List<String> listEror;
 	/**
 	 * Получение id паспорта
 	 */
@@ -213,22 +208,6 @@ public class PassportInfo implements Serializable{
 	 */
 	public void setNameOwner(String nameOwner) {
 		this.nameOwner = nameOwner;
-	}
-
-	/**
-	 * Получение списка ошибок
-	 * @return - список ошибок
-	 */
-	public List<String> getListEror() {
-		return listEror;
-	}
-
-	/**
-	 * Установка нового списка ошибок
-	 * @param listEror - новый сисок ошибок
-	 */
-	public void setListEror(List<String> listEror) {
-		this.listEror = listEror;
 	}
 
 	@Override
