@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -72,7 +73,8 @@ public class DAO  {
 	/**
 	 * Объект для получения текста запросов
 	 */
-	private SQLQueries sqlQueries = new SQLServerQueries();
+	@Autowired
+	private SQLQueries sqlQueries;
 	/**
 	 * Объект DataSource
 	 */
@@ -84,19 +86,23 @@ public class DAO  {
 	/**
 	 * Объект, отображающий пасспорт в программный объект из БД
 	 */
-	private PassportRowMapper passportRowMapper = new PassportRowMapper();
+	@Autowired
+	private PassportRowMapper passportRowMapper;
 	/**
 	 * Объект, отображающий организацию в программный объект из БД
 	 */
-	private OrganizationRowMapper organizationRowMapper = new OrganizationRowMapper();
+	@Autowired
+	private OrganizationRowMapper organizationRowMapper;
 	/**
 	 * Объект, отображающий событие в программный объект из БД
 	 */
-	private EventRowMapper eventRowMapper = new EventRowMapper();
+	@Autowired
+	private EventRowMapper eventRowMapper;
 	/**
 	 * Объект, отображающий пользователя в программный объект из БД
 	 */
-	private UserRowMapper userRowMapper = new UserRowMapper();
+	@Autowired
+	private UserRowMapper userRowMapper;
 	
 	/**
 	 * Подключение DataSource к базе данных и создание jdbcTemplate

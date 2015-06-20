@@ -15,7 +15,7 @@
   <dependencies>
   	<dependency>
   		<groupId>ru.lenoblgis</groupId>
-  		<artifactId>ServicesAgrocultural</artifactId>
+  		<artifactId>Validation</artifactId>
   	</dependency>
   	
   	<dependency>

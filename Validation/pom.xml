@@ -10,7 +10,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>ru.lenoblgis</groupId>
-		    <artifactId>Presentation</artifactId>
+		    <artifactId>ServicesAgrocultural</artifactId>
 		</dependency>
 		
 	</dependencies>

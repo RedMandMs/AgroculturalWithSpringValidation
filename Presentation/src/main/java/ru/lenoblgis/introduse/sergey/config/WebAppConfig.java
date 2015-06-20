@@ -13,17 +13,26 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import ru.lenoblgis.introduse.sergey.data.dao.DAO;
+import ru.lenoblgis.introduse.sergey.data.dao.sqlQueries.SQLQueries;
+import ru.lenoblgis.introduse.sergey.data.dao.sqlQueries.SQLServerQueries;
+import ru.lenoblgis.introduse.sergey.domen.mappers.EventRowMapper;
+import ru.lenoblgis.introduse.sergey.domen.mappers.OrganizationRowMapper;
+import ru.lenoblgis.introduse.sergey.domen.mappers.PassportRowMapper;
+import ru.lenoblgis.introduse.sergey.domen.mappers.UserRowMapper;
 import ru.lenoblgis.introduse.sergey.services.EventService;
 import ru.lenoblgis.introduse.sergey.services.OwnerService;
 import ru.lenoblgis.introduse.sergey.services.PassportService;
 import ru.lenoblgis.introduse.sergey.services.UserDetailsServiceImpl;
 import ru.lenoblgis.introduse.sergey.services.UserService;
+import ru.lenoblgis.introduse.sergey.validation.PassportValidator;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan({"ru.lenoblgis.introduse.sergey.controllers", "ru.lenoblgis.introduse.sergey.data.dao"})
+@ComponentScan({"ru.lenoblgis.introduse.sergey.controllers",
+					"ru.lenoblgis.introduse.sergey.data.dao",
+					"ru.lenoblgis.introduse.sergey.domen.mappers"})
 public class WebAppConfig extends WebMvcConfigurerAdapter {
  
     /**
@@ -54,8 +63,53 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
      * @return - DAO
      */
     @Bean
-    DAO getDAO() {
+    public DAO getDAO() {
         return new DAO();
+    }
+    
+    /**
+     * Получение бина предоставляющего sql-запросы для DAO
+     * @return - бин предоставляющий sql-запросы для DAO
+     */
+    @Bean
+    public SQLQueries getSQLQueries(){
+    	return new SQLServerQueries();
+    }
+    
+    /**
+     * Объект для отображения пасспорта из БД в программное представляение (используется DAO)
+     * @return - маппер для паспорта
+     */
+    @Bean
+    public PassportRowMapper getPassportRowMapper(){
+    	return new PassportRowMapper();
+    }
+    
+    /**
+     * Объект для отображения событий из БД в программное представляение (используется DAO)
+     * @return - маппер для событий
+     */
+    @Bean
+    public EventRowMapper getEventRowMapper(){
+    	return new EventRowMapper();
+    }
+    
+    /**
+     * Объект для отображения организаций из БД в программное представляение (используется DAO)
+     * @return - маппер для организаций
+     */
+    @Bean
+    public OrganizationRowMapper getOrganizationRowMapper(){
+    	return new OrganizationRowMapper();
+    }
+    
+    /**
+     * Объект для отображения пользователей из БД в программное представляение (используется DAO)
+     * @return - маппер для пользователей
+     */
+    @Bean
+    public UserRowMapper getUserRowMapper(){
+    	return new UserRowMapper();
     }
     
     /**
@@ -63,7 +117,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
      * @return - сервис рабыты с организациями
      */
     @Bean
-    OwnerService getOwnerService() {
+    public OwnerService getOwnerService() {
         return new OwnerService();
     }
     
@@ -72,7 +126,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
      * @return - сервис работы с паспортами полей
      */
     @Bean
-    PassportService getPassportService(){
+    public PassportService getPassportService(){
     	return new PassportService();
     }
     
@@ -81,7 +135,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
      * @return - сервис работы с журналом событий
      */
     @Bean
-    EventService getEventService(){
+    public EventService getEventService(){
     	return new EventService();
     }
     
@@ -90,7 +144,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
      * @return - сервис работы с пользователями
      */
     @Bean
-    UserService getUserService(){
+    public UserService getUserService(){
     	return new UserService();
     }
     
@@ -117,5 +171,14 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     public UserDetailsService getUserDetailsService(){
         return new UserDetailsServiceImpl();
     }
- 
+    
+    /**
+     * Получение бина валидатора введённых данных о пасспорте, при его создании или регистрации
+     * @return
+     */
+    @Bean
+    public PassportValidator getPassportValidator(){
+    	return new PassportValidator();
+    }
+
 }
