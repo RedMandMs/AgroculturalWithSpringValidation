@@ -12,8 +12,9 @@ import ru.lenoblgis.introduse.sergey.datatransferobject.passportinfo.PassportInf
 import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
 
 /**
- * Валидатор для DTO представления пасспорта (вводимых данных)
- * @author VILGODSKIY
+ * Кдасс для проверки вводимых данных создании и изменении паспорта
+ * @author vilgodskiy
+ *
  */
 public class PassportValidator implements Validator{
 

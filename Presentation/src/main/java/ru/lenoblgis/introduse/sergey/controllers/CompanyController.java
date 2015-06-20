@@ -199,7 +199,7 @@ public class CompanyController {
 				case("NegativINN"):
 					listMessage.add("ИНН должен быть положительным значением!");
 					break;
-				case("wrongNameCompany"):
+				case("WrongNameCompany"):
 					listMessage.add("Имя компании должно быть от 3 до 20 символов!");
 					break;
 			}

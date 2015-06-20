@@ -28,8 +28,15 @@
 					<tr>
 						<th><label for="user_password">Введите пароль:</label></th>
 						<td>
-							<sf:input path="password" size="20" id="user_password"/>
+							<sf:password path="password" size="20" id="user_password"/>
 							<small id ="password_msg">Пароль должен состоять из латинских символов и цифр. Максимальная длинна пароля 15 символов, минимальная - 5</small>
+						</td>
+					</tr>
+					
+					<tr>
+						<th><label for="user_repassword">Введите пароль повторно:</label></th>
+						<td>
+							<sf:password path="repassword" size="20" id="user_repassword"/>
 						</td>
 					</tr>
 					

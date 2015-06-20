@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author Administrator
  *
  */
-public class UserOrganization implements Serializable {
+public class UserOrganization {
 
 	
 	/**
@@ -18,7 +18,7 @@ public class UserOrganization implements Serializable {
 	 * @param inn - номер ИНН организации
 	 * @param address - адрес организации
 	 */
-	public UserOrganization(String login, String password, String name, int inn, String address) {
+	public UserOrganization(String login, String password, String name, Integer inn, String address) {
 		this.login = login;
 		this.password = password;
 		this.organizationName = name;
@@ -36,12 +36,17 @@ public class UserOrganization implements Serializable {
 	/**
 	 * id пользователя
 	 */
-	private int userId;
+	private Integer userId;
 	
 	/**
 	 * Пароль пользователя
 	 */
 	private String password;
+	
+	/**
+	 * Повторный пороль
+	 */
+	private String repassword;
 	
 	/**
 	 * Логин пользователя
@@ -51,7 +56,7 @@ public class UserOrganization implements Serializable {
 	/**
 	 * id организации
 	 */
-	private int organizationId;
+	private Integer organizationId;
 	
 	/**
 	 * Название организации
@@ -75,7 +80,7 @@ public class UserOrganization implements Serializable {
 	 * Получить id организации
 	 * @return - id организации
 	 */
-	public int getOrganizationId() {
+	public Integer getOrganizationId() {
 		return organizationId;
 	}
 
@@ -83,7 +88,7 @@ public class UserOrganization implements Serializable {
 	 * Установить id организации
 	 * @param id - новое значение id организации
 	 */
-	public void setOrganizationId(int id) {
+	public void setOrganizationId(Integer id) {
 		this.organizationId = id;
 	}
 
@@ -107,7 +112,7 @@ public class UserOrganization implements Serializable {
 	 * Получить ИНН органанизации
 	 * @return - ИНН организации
 	 */
-	public int getInn() {
+	public Integer getInn() {
 		return inn;
 	}
 
@@ -115,7 +120,7 @@ public class UserOrganization implements Serializable {
 	 * Установить ИНН органанизации
 	 * @param inn - новый ИНН организации
 	 */
-	public void setInn(int inn) {
+	public void setInn(Integer inn) {
 		this.inn = inn;
 	}
 
@@ -132,18 +137,14 @@ public class UserOrganization implements Serializable {
 	 * @param addres - новый адрес организации
 	 */
 	public void setAddress(String address) {
-		if(address == null || address.trim() == ""){
-			this.address = "UNKNOWN";
-		}else{
-			this.address = address;			
-		}
+		this.address = address;			
 	}
 
 	/**
 	 * Получить пользовательский Id
 	 * @return - id пользователя
 	 */
-	public int getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
 
@@ -151,7 +152,7 @@ public class UserOrganization implements Serializable {
 	 * Установить пользовательский id
 	 * @param userId - новый id пользователя
 	 */
-	public void setUserId(int userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 
@@ -169,6 +170,22 @@ public class UserOrganization implements Serializable {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * Получить подтверждение пароля
+	 * @return - подтверждение пароля (его повторный ввод)
+	 */
+	public String getRepassword() {
+		return repassword;
+	}
+
+	/**
+	 * Установить подтверждение пароля
+	 * @param repassword - подтверждение пароля (его повторный ввод)
+	 */
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
 
 	/**
