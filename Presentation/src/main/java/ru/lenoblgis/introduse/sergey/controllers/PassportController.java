@@ -5,12 +5,16 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,6 +29,16 @@ import ru.lenoblgis.introduse.sergey.services.PassportService;
 @RequestMapping(value = "/passport")
 public class PassportController {
 
+	
+	@Autowired
+    @Qualifier("passportValidator")
+    private Validator validator;
+	
+	@InitBinder
+	private void initBinder(WebDataBinder binder) {
+	    binder.setValidator(validator);
+	}
+	
 	@Autowired
 	private PassportService passportService;
 	
@@ -111,7 +125,7 @@ public class PassportController {
 	 * @return - путь к запрашиваемому ресурсу
 	 */
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
-    public String editPassport(@Validated PassportInfo changedPassport, ModelMap model, BindingResult result) {
+    public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) {
 		
 		if(result.hasErrors()){
 			System.out.println();

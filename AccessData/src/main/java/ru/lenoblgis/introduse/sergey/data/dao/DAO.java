@@ -415,16 +415,4 @@ public class DAO  {
 		}
 		 
 	}
-
-	/**
-	 * Искать паспорт по кадастровому номеру - для валидации
-	 * @param cadastrNumber - кадастровый номер
-	 * @return - список найденных паспортов
-	 */
-	public List<Passport> findPassportByCadatrNumber(Integer cadastrNumber){
-		Passport serchingPassport = new Passport();
-		serchingPassport.setCadastrNumber(cadastrNumber);
-		return findPassports(serchingPassport);
-	}
-
 }
