@@ -3,8 +3,13 @@ package ru.lenoblgis.introduse.sergey.controllers;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -19,10 +24,30 @@ import ru.lenoblgis.introduse.sergey.services.UserService;
 @RequestMapping(value="/registration")
 public class RegistrationController {
 	
+	/**
+	 * Сервис для работы с пользователями
+	 */
 	@Autowired
 	private UserService userService;
+	
+	/**
+	 * Сервис для работы с организациями
+	 */
 	@Autowired
 	private OwnerService ownerService;
+	
+	/**
+	 * Валидатор для проверки введённых данных при регистрации
+	 */
+	@Autowired
+    @Qualifier("registrationValidator")
+    private Validator validator;
+	
+	@InitBinder
+	private void initBinder(WebDataBinder binder) {
+	    binder.setValidator(validator);
+	}
+	
 	/**
 	 * Показать Форму регистрации
 	 * @param model - модель
@@ -46,7 +71,11 @@ public class RegistrationController {
 	 * @return - view
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public String registration(UserOrganization userOrganization, ModelMap model){
+	public String registration(UserOrganization userOrganization, BindingResult result){
+		
+		if(result.hasErrors()){
+			return "redirect:/registration";
+		}
 		
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpSession session = attr.getRequest().getSession(true); // true == allow create

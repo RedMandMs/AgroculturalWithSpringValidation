@@ -2,6 +2,7 @@ package ru.lenoblgis.introduse.sergey.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -9,9 +10,11 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -29,7 +32,9 @@ import ru.lenoblgis.introduse.sergey.services.PassportService;
 @RequestMapping(value = "/passport")
 public class PassportController {
 
-	
+	/**
+	 * ¬алидатор дл€ проверки коректности паспорта при создании и редактировании
+	 */
 	@Autowired
     @Qualifier("passportValidator")
     private Validator validator;
@@ -39,8 +44,17 @@ public class PassportController {
 	    binder.setValidator(validator);
 	}
 	
+	/**
+	 * —ервис дл€ работы с паспортами
+	 */
 	@Autowired
 	private PassportService passportService;
+	
+	/**
+	 * 
+	 */
+	@Autowired
+	ResourceBundleMessageSource rbms; 
 	
 	/**
 	 * ћетод дл€ отображени€ конкретного паспорта
@@ -127,13 +141,19 @@ public class PassportController {
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
     public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) {
 		
-		if(result.hasErrors()){
-			System.out.println();
+		List<ObjectError> erorList = result.getAllErrors();
+		if( ! erorList.isEmpty()){
+			for(ObjectError eror : erorList){
+				String message = rbms.getMessage(eror.getCode(), eror.getArguments(), Locale.getDefault());
+				System.out.println(message);
+			}
+			return "redirect:/passport/change_passport_info/"+changedPassport.getId();
 		}
 		
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpSession session = attr.getRequest().getSession(true); // true == allow create
 		
+		//≈сли паспорт изменЄн, то измен€ем список своих паспортов
 		if(passportService.editPassport(changedPassport)){
 			List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
 			for(int i = 0; i < myPassportList.size(); i++){

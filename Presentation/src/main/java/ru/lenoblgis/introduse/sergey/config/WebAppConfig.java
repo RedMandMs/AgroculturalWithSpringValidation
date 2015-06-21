@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.validation.Validator;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -26,7 +27,9 @@ import ru.lenoblgis.introduse.sergey.services.OwnerService;
 import ru.lenoblgis.introduse.sergey.services.PassportService;
 import ru.lenoblgis.introduse.sergey.services.UserDetailsServiceImpl;
 import ru.lenoblgis.introduse.sergey.services.UserService;
+import ru.lenoblgis.introduse.sergey.validation.OrganizationValidator;
 import ru.lenoblgis.introduse.sergey.validation.PassportValidator;
+import ru.lenoblgis.introduse.sergey.validation.RegistrationValidator;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
@@ -175,8 +178,8 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     }
     
     /**
-     * Получение бина валидатора введённых данных о пасспорте, при его создании или регистрации
-     * @return
+     * Получение бина валидатора введённых данных о пасспорте, при его создании или изменении
+     * @return - валидатор паспорта
      */
     @Bean
     @Qualifier("passportValidator")
@@ -184,4 +187,34 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     	return new PassportValidator();
     }
 
+    /**
+     * Получение бина валидатора введённых данных об организации, при её изменении
+     * @return - валидатор организации
+     */
+    @Bean
+    @Qualifier("organizationValidator")
+    public Validator getOrganizationValidator(){
+    	return new OrganizationValidator();
+    }
+    
+    /**
+     * Получение бина валидатора введённых данных при регистрации (о пользователе и организации)
+     * @return - валидатор информации при регистрации
+     */
+    @Bean
+    @Qualifier("registrationValidator")
+    public Validator getRegistrationValidator(){
+    	return new RegistrationValidator();
+    }
+    
+    /**
+     * Получчение бина для считывания сообщений об ошибках из файла pecources/WEB-INF/messeges/erormessages.properties
+     * @return
+     */
+    @Bean
+    public ResourceBundleMessageSource getResourceBundleMessageSource(){
+    	ResourceBundleMessageSource rbms = new ResourceBundleMessageSource();
+    	rbms.setBasename("WEB-INF\\messages\\erormessages");
+    	return rbms;
+    }
 }

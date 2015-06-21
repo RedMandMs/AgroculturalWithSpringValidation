@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -49,6 +55,18 @@ public class CompanyController {
 	 */
 	@Autowired
 	private EventService eventService;
+	
+	/**
+	 * Валидатор для проверки введённых данных при изменении информации о компании
+	 */
+	@Autowired
+    @Qualifier("organizationValidator")
+    private Validator validator;
+	
+	@InitBinder
+	private void initBinder(WebDataBinder binder) {
+	    binder.setValidator(validator);
+	}
 	
 	/**
 	 * Метод отображающий данные о конкретной компании
@@ -126,11 +144,14 @@ public class CompanyController {
 	/**
 	 * Метод обрабатывающий изменение в информации об организации
 	 * @param organizationInfo - новая информация об организации
-	 * * @param model - список для отображения данных на странице
 	 * @return - отображение страницы после изменения (перенаправление)
 	 */
 	@RequestMapping(value = "/company/change_organization_info", method = RequestMethod.POST)
-    public String сhangeInfoOrganization(OrganizationInfo organizationInfo, ModelMap model) {
+    public String сhangeInfoOrganization(@Valid OrganizationInfo organizationInfo, BindingResult result) {
+		
+		if(result.hasErrors()){
+			return "redirect:/organization/company/change_organization_info";
+		}
 		
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpSession session = attr.getRequest().getSession(true); // true == allow create

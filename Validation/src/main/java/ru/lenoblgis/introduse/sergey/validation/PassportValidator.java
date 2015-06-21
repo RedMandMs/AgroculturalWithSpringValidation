@@ -41,36 +41,32 @@ public class PassportValidator implements Validator{
 	public void validate(Object target, Errors errors) {
 		
 	        PassportInfo passportInfo = (PassportInfo) target;
-    
-	        //-------------Проверка не было ли поле кадастрового номера оставлено пустым
-	        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cadastrNumber", "cadastrNumber.empty", "cadastrNumber must not be empty.");
-	        
-	        
+
 	        //-------------Проверка на положительность кадастрового номера
-	        if (passportInfo.getCadastrNumber() <= 0) {
-	            errors.rejectValue("cadastrNumber", "NegativCadastrNumber");
+	        if (passportInfo.getCadastrNumber() != null && passportInfo.getCadastrNumber() <= 0) {
+	            errors.rejectValue("cadastrNumber", "cadastrNumber.isNegative");
+	        }else{
+	        	
+	        	//-------------Проверка на копию кадастрового номера
+		        //Проверяем, нету ли в БД паспорта с таким  кадастровым номером
+	        	Passport serchingPassport = new Passport();
+	        	serchingPassport.setCadastrNumber(passportInfo.getCadastrNumber());
+	        	List<Passport> findingPasports = dao.findPassports(serchingPassport);
+	        	//Если есть
+	        	if( ! findingPasports.isEmpty()){
+	        		//Если у пасспорта есть id - значит этот паспорт редактируется, иначе - создаётся
+	    	        if(passportInfo.getId() != null){
+	    	        	//Если паспорт редактируется, то необходимо проверить не тот же ли это паспорт (что означает кадастровый номер не изменялся)
+	    	        	if( ! passportInfo.getId().equals(findingPasports.get(0).getId())){
+	    	        		//Если это разные паспорта, то добавляем ошибку
+	    	        		errors.rejectValue("cadastrNumber", "cadastrNumber.copy");
+	    	        	}
+	    	        }else{
+	    	        	//Если создаётся, то это ошибка
+	    	        	errors.rejectValue("cadastrNumber", "cadastrNumber.copy");
+	    	        }
+	        	}
 	        }
-	        
-	        
-	        //-------------Проверка на копию кадастрового номера
-	        //Проверяем, нету ли в БД паспорта с таким  кадастровым номером
-        	Passport serchingPassport = new Passport();
-        	serchingPassport.setCadastrNumber(passportInfo.getCadastrNumber());
-        	List<Passport> findingPasports = dao.findPassports(serchingPassport);
-        	//Если есть
-        	if( ! findingPasports.isEmpty()){
-        		//Если у пасспорта есть id - значит этот паспорт редактируется, иначе - создаётся
-    	        if(passportInfo.getId() != null){
-    	        	//Если паспорт редактируется, то необходимо проверить не тот же ли это паспорт (что означает кадастровый номер не изменялся)
-    	        	if( ! passportInfo.getId().equals(findingPasports.get(0).getId())){
-    	        		//Если это разные паспорта, то добавляем ошибку
-    	        		errors.rejectValue("cadastrNumber", "CopyCadastrNumber");
-    	        	}
-    	        }else{
-    	        	//Если создаётся, то это ошибка
-    	        	errors.rejectValue("cadastrNumber", "CopyCadastrNumber");
-    	        }
-        	}
 	      
         	//-------------Проверка не было ли поле площади оставлено пустым
         	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "area", "area.empty", "area must not be empty.");
@@ -78,7 +74,7 @@ public class PassportValidator implements Validator{
         	
         	//-------------Проверка на положительность площади
         	if (passportInfo.getArea() <= 0) {
-	            errors.rejectValue("area", "NegativeArea");
+	            errors.rejectValue("area", "area.isNegative");
 	        }
 	}
 
