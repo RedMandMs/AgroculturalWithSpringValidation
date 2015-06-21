@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import ru.lenoblgis.introduse.sergey.data.dao.DAO;
 import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.OrganizationInfo;
-import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.UserOrganization;
+import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.RegistrationInfo;
 import ru.lenoblgis.introduse.sergey.domen.owner.Owner;
 import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 import ru.lenoblgis.introduse.sergey.domen.user.User;
@@ -41,7 +41,7 @@ public class UserService implements Serializable{
 	 * @param userOrganization - объект представл€ющий пользовател€ и организацию, указанную при регистрации
 	 * @return - информаци€ о созданной организации
 	 */
-	public OrganizationInfo registration(UserOrganization userOrganization){
+	public OrganizationInfo registration(RegistrationInfo userOrganization){
 		
 		OrganizationInfo organizationInfo = new OrganizationInfo();
 		

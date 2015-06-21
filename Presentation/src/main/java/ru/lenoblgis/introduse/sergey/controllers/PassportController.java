@@ -174,16 +174,19 @@ public class PassportController {
 
 		HttpSession session = getSession();
 		
-		PassportInfo createdPassport = (PassportInfo) session.getAttribute("incorrectPassport");
+		PassportInfo createdPassport = (PassportInfo) session.getAttribute("incorrectCreatePassport");
 		
 		if(createdPassport == null){
+			session.removeAttribute("messagesCreateEror");
+			session.removeAttribute("creatingPassport");
 			OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
 			createdPassport = new PassportInfo();
 			createdPassport.setIdOwner(myCompany.getId());
 			createdPassport.setNameOwner(myCompany.getName());
 			model.addAttribute("message", "Введите данные о новом пасспорте");
 		}else{
-			session.removeAttribute("incorrectPassport");
+			session.removeAttribute("incorrectCreatePassport");
+			session.setAttribute("creatingPassport", createdPassport);
 		}
 		model.addAttribute("createdPassport", createdPassport);
 		
@@ -196,11 +199,19 @@ public class PassportController {
 	 * @return - путь к запрашиваемому ресурсу
 	 */
 	@RequestMapping(value = "/createPassport", method = RequestMethod.POST)
-    public String createPassport(PassportInfo createdPassport, ModelMap model) {
+    public String createPassport(@Valid PassportInfo createdPassport, BindingResult result) {
 		
 		HttpSession session = getSession();
 		
-		session.removeAttribute("messagesCreateEror");
+		//Получаем сообщения об ошибках, если они есть
+		List<ObjectError> erorList = result.getAllErrors();
+		List<String> erorMessageList = new ArrayList<>();
+		if( ! erorList.isEmpty()){
+			erorMessageList = getListMessageForEror(erorList);
+			session.setAttribute("incorrectCreatePassport", createdPassport);
+			session.setAttribute("messagesCreateEror", erorMessageList);
+			return "redirect:/passport/createPassport";
+		}
 		
 		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
 		
@@ -216,7 +227,7 @@ public class PassportController {
 			session.setAttribute("lastList", "mylistpassports");
 			return "redirect:/passport/"+createdPassport.getId();
 		}else{
-			session.setAttribute("incorrectPassport", createdPassport);
+			session.setAttribute("incorrectCreatePassport", createdPassport);
 			return "redirect:/passport/createPassport";
 		}
 	}
@@ -303,11 +314,20 @@ public class PassportController {
 		return "redirect:/passport/"+ lastList;
 	}
 	
+	/**
+	 * Получить сессию
+	 * @return - сессия
+	 */
 	private HttpSession getSession() {
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		return attr.getRequest().getSession(true); // true == allow create
 	}
 	
+	/**
+	 * Получить список сообщений об ошибках
+	 * @param listEror - список ошибок
+	 * @return - список сообщений об ошибках
+	 */
 	private List<String> getListMessageForEror(List<ObjectError> listEror){
 		List<String> messages = new ArrayList<>();
 		for(ObjectError error : listEror){

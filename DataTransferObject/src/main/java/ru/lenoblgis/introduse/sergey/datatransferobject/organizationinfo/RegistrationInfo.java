@@ -1,13 +1,12 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo;
 
-import java.io.Serializable;
 
 /**
  * Класс Data Transfer Object для формы регистрации, где сразу содаётся и пользователь и организация
  * @author Administrator
  *
  */
-public class UserOrganization {
+public class RegistrationInfo {
 
 	
 	/**
@@ -18,7 +17,7 @@ public class UserOrganization {
 	 * @param inn - номер ИНН организации
 	 * @param address - адрес организации
 	 */
-	public UserOrganization(String login, String password, String name, Integer inn, String address) {
+	public RegistrationInfo(String login, String password, String name, Integer inn, String address) {
 		this.login = login;
 		this.password = password;
 		this.organizationName = name;
@@ -29,7 +28,7 @@ public class UserOrganization {
 	/**
 	 * Конструктор по-умолчанию
 	 */
-	public UserOrganization(){
+	public RegistrationInfo(){
 		
 	}
 
@@ -209,7 +208,7 @@ public class UserOrganization {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 
-		UserOrganization that = (UserOrganization) o;
+		RegistrationInfo that = (RegistrationInfo) o;
 
 		if (userId == that.userId) return true;
 		if (organizationId != that.organizationId) return false;

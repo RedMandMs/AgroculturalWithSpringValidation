@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -113,17 +114,14 @@ public class CompanyController {
 	@RequestMapping(value = "/company/change_organization_info", method = RequestMethod.GET)
     public String showChangeInfoOrganization(ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
-		
-		Boolean rightTry = (Boolean) session.getAttribute("changeOrganizationInfo");
+		HttpSession session = getSession();
 		
 		OrganizationInfo myCompany;
 		
 		String message = "";
-		if(rightTry != null){
-			session.removeAttribute("changeOrganizationInfo");
+		if(session.getAttribute("incorrectCompany") != null){
 			myCompany = (OrganizationInfo) session.getAttribute("incorrectCompany");
+			session.removeAttribute("incorrectCompany");
 		}else{
 			session.removeAttribute("editOrganizationErors");
 			message = "Измените необходимые данные";
@@ -149,12 +147,17 @@ public class CompanyController {
 	@RequestMapping(value = "/company/change_organization_info", method = RequestMethod.POST)
     public String сhangeInfoOrganization(@Valid OrganizationInfo organizationInfo, BindingResult result) {
 		
-		if(result.hasErrors()){
+		HttpSession session = getSession();
+		
+		//Получаем сообщения об ошибках, если они есть
+		List<ObjectError> erorList = result.getAllErrors();
+		List<String> erorMessageList = new ArrayList<>();
+		if( ! erorList.isEmpty()){
+			erorMessageList = getListMessageForEror(erorList);
+			session.setAttribute("incorrectCompany", organizationInfo);
+			session.setAttribute("editOrganizationErors", erorMessageList);
 			return "redirect:/organization/company/change_organization_info";
 		}
-		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
 
 		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
 		
@@ -163,8 +166,6 @@ public class CompanyController {
 			setMyCompany(session, myCompany.getId());
 			return "redirect:/organization/company/mycompany";
 		}else{
-			session.setAttribute("changeOrganizationInfo", false);
-			session.setAttribute("incorrectCompany", organizationInfo);
 			return "redirect:/organization/company/change_organization_info";
 		}
 	}
@@ -190,42 +191,28 @@ public class CompanyController {
 	}
 	
 	/**
-	 * Получить список сообщений по заданным ошибкам (при регистрации и изменении информации об организации)
+	 * Получить список сообщений об ошибках
 	 * @param listEror - список ошибок
-	 * @return - список сообщений
+	 * @return - список сообщений об ошибках
 	 */
-	public static List<String> getErorRegistration(List<String> listEror) {
-		List<String> listMessage = new ArrayList<String>();
-		for(String eror : listEror){
-			switch(eror){
-				
-				case("WrongFormatLogin"):
-					listMessage.add("Неверный формат логина (более 4 и менее 16 латинских символов)!");
-					break;
-				case("WrongFormatPassword"):
-					listMessage.add("Неверный формат пароля (более 4 и менее 16 символов)!");
-					break;
-					
-				case("CopyLogin"):
-					listMessage.add("Пользователь с таким логином уже существует!");
-					break;
+	public static List<String> getListMessageForEror(List<ObjectError> listEror){
+		List<String> messages = new ArrayList<>();
+		for(ObjectError error : listEror){
 			
-				case("CopyNameOrganization"):
-					listMessage.add("Организация с таким названием уже зарегистрирована!");
-					break;
-				
-				case("CopyINN"):
-					listMessage.add("Организация с таким ИНН уже зарегистрирована!");
-					break;
-				case("NegativINN"):
-					listMessage.add("ИНН должен быть положительным значением!");
-					break;
-				case("WrongNameCompany"):
-					listMessage.add("Имя компании должно быть от 3 до 20 символов!");
-					break;
+			//Если невозможно считать значение поля
+			if(error.getCode().equals("typeMismatch")){
+				String code = error.getCodes()[1];
+				String[] partsEror = code.split("\\.");
+				String field = partsEror[partsEror.length-1];
+				if(field.equals("inn")){
+					messages.add("Некорректно введен ИНН компании!");
+				}
+			}else{
+				messages.add(error.getDefaultMessage());
 			}
 		}
-		return listMessage;
+		
+		return messages;
 	}
 	
 	/**
@@ -249,5 +236,14 @@ public class CompanyController {
 		}
 		session.setAttribute("myIdPasports", myIdPassports);
 
+	}
+	
+	/**
+	 * Получить сессию
+	 * @return - сессия
+	 */
+	private HttpSession getSession() {
+		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		return attr.getRequest().getSession(true); // true == allow create
 	}
 }

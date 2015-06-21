@@ -56,24 +56,25 @@ public class OrganizationValidator implements Validator {
 		
 		
 		//-------------Проверка положительности ИНН
-		if(organization.getInn() <= 0){
-			errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
-		}else{
-			
-			//-------------Проверка ИНН на дублированность
-			Organization serchinOrganization = new Organization();
-			serchinOrganization.setInn(organization.getInn());
-			List<Organization> organizationList = dao.findOwners(serchinOrganization);
-			//Отлично, если ничего не найдено
-			if( ! organizationList.isEmpty()){
-				//Иначе проверяем не один и тот же это паспорт (в списке может быть только один пасспорт, т.к. ИНН не дублируются)
-				if( ! organization.getId().equals(organizationList.get(0).getId())){
-					//Если это разные паспорта, то добавляем сообщение об ошибке
-					errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+		if(organization.getInn() != null){
+			if(organization.getInn() <= 0){
+				errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
+			}else{
+				
+				//-------------Проверка ИНН на дублированность
+				Organization serchinOrganization = new Organization();
+				serchinOrganization.setInn(organization.getInn());
+				List<Organization> organizationList = dao.findOwners(serchinOrganization);
+				//Отлично, если ничего не найдено
+				if( ! organizationList.isEmpty()){
+					//Иначе проверяем не один и тот же это паспорт (в списке может быть только один пасспорт, т.к. ИНН не дублируются)
+					if( ! organization.getId().equals(organizationList.get(0).getId())){
+						//Если это разные паспорта, то добавляем сообщение об ошибке
+						errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+					}
 				}
 			}
 		}
-		
 	}
 
 }

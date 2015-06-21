@@ -1,12 +1,17 @@
 package ru.lenoblgis.introduse.sergey.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -16,7 +21,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.OrganizationInfo;
-import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.UserOrganization;
+import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.RegistrationInfo;
 import ru.lenoblgis.introduse.sergey.services.OwnerService;
 import ru.lenoblgis.introduse.sergey.services.UserService;
 
@@ -56,8 +61,20 @@ public class RegistrationController {
 	@RequestMapping(method = RequestMethod.GET)
     public String showRegistrationForm(ModelMap model) {
 		
-		UserOrganization userOrganization = new UserOrganization();
-		model.addAttribute(userOrganization);
+		HttpSession session = getSession();
+		
+		RegistrationInfo userOrganization = new RegistrationInfo();
+		model.addAttribute("userOrganization", userOrganization);
+		
+		RegistrationInfo reviwingOrganization = (RegistrationInfo) session.getAttribute("uncorrectRegistrationUserCompany");
+		
+		if(reviwingOrganization!=null){
+			session.removeAttribute("uncorrectRegistrationUserCompany");
+			session.setAttribute("reviwingOrganization", reviwingOrganization);
+		}else{
+			session.setAttribute("reviwingOrganization", new RegistrationInfo());
+			session.removeAttribute("listErorRegistration");
+		}
 		
 		return "registration/registrationForm";
 	}
@@ -66,30 +83,43 @@ public class RegistrationController {
 
 	/**
 	 * Зарегестрировать
-	 * @param userOrganization - Информация о пользователе и его организации
-	 * @param model - модель
-	 * @return - view
+	 * @param registrationInfo - Информация о пользователе и его организации
+	 * @return - отображение запрашиваемого ресурса
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public String registration(UserOrganization userOrganization, BindingResult result){
+	public String registration(@Valid RegistrationInfo registrationInfo, BindingResult result){
 		
-		if(result.hasErrors()){
+		HttpSession session = getSession();
+		
+		//Получаем сообщения об ошибках, если они есть
+		List<ObjectError> erorList = result.getAllErrors();
+		List<String> erorMessageList = new ArrayList<>();
+		if( ! erorList.isEmpty()){
+			erorMessageList = CompanyController.getListMessageForEror(erorList);
+			session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
+			session.setAttribute("listErorRegistration", erorMessageList);
 			return "redirect:/registration";
 		}
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
-		
-		OrganizationInfo regestratingCompany = userService.registration(userOrganization);
+		OrganizationInfo regestratingCompany = userService.registration(registrationInfo);
 		
 		if(regestratingCompany.getId() != null){
 			session.removeAttribute("uncorrectRegistrationUserCompany");
 			session.removeAttribute("listErorRegistration");
 			return "redirect:/login";
 		}
-		session.setAttribute("uncorrectRegistrationUserCompany", userOrganization);
-		
+		session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
 		return "redirect:/registration";
+	}
+	
+	
+	/**
+	 * Получить сессию
+	 * @return - сессия
+	 */
+	private HttpSession getSession() {
+		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		return attr.getRequest().getSession(true); // true == allow create
 	}
 	
 }

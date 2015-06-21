@@ -20,7 +20,7 @@
 					<tr>
 						<th><label for="user_login">Введите логин:</label></th>
 						<td>
-							<sf:input path="login" size="20" id="user_login" value="${uncorrectRegistrationUserCompany.getLogin()}"/>
+							<sf:input path="login" size="20" id="user_login" value="${reviwingOrganization.getLogin()}"/>
 							<small id ="login_msg">Логин должен состоять из латинских символов и цифр. Максимальная длинна логина 15 символов, минимальная - 5</small>
 						</td>
 					</tr>
@@ -42,17 +42,17 @@
 					
 					<tr>
 						<th><label for="name_organization">Введите имя компании: </label></th>
-						<td><sf:input path="organizationName" size="20" id="name_organization" value="${uncorrectRegistrationUserCompany.getOrganizationName()}"/></td>
+						<td><sf:input path="organizationName" size="20" id="name_organization" value="${reviwingOrganization.getOrganizationName()}"/></td>
 					</tr>
 					
 					<tr>
 						<th><label for="inn">Введите ИНН компании: </label></th>
-						<td><sf:input path="inn" size="20" id="inn" value="${uncorrectRegistrationUserCompany.getInn()}"/></td>
+						<td><sf:input path="inn" size="20" id="inn" value="${reviwingOrganization.getInn()}"/></td>
 					</tr>
 					
 					<tr>
 						<th><label for="organization_address">Введите адрес компании: </label></th>
-						<td><sf:input path="address" size="50" id="organization_address" value="${uncorrectRegistrationUserCompany.getAddress()}"/></td>
+						<td><sf:input path="address" size="50" id="organization_address" value="${reviwingOrganization.getAddress()}"/></td>
 					</tr>
 					
 					<tr>

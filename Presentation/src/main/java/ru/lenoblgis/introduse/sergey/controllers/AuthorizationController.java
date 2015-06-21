@@ -18,7 +18,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.OrganizationInfo;
-import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.UserOrganization;
+import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.RegistrationInfo;
 import ru.lenoblgis.introduse.sergey.datatransferobject.passportinfo.PassportInfo;
 import ru.lenoblgis.introduse.sergey.domen.actionevent.TypeEvent;
 import ru.lenoblgis.introduse.sergey.domen.passport.RegionField;
@@ -60,7 +60,7 @@ public class AuthorizationController {
 			model.addAttribute("message", message);
 		}
 		
-		UserOrganization userOrganization = new UserOrganization();
+		RegistrationInfo userOrganization = new RegistrationInfo();
 		model.addAttribute("userOrganization", userOrganization);
 		
 		return "login";

@@ -8,7 +8,7 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import ru.lenoblgis.introduse.sergey.data.dao.DAO;
-import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.UserOrganization;
+import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.RegistrationInfo;
 import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 import ru.lenoblgis.introduse.sergey.domen.user.User;
 
@@ -27,7 +27,7 @@ public class RegistrationValidator implements Validator {
 	 */
 	@Override
 	public boolean supports(Class<?> clazz) {
-		return UserOrganization.class.equals(clazz);
+		return RegistrationInfo.class.equals(clazz);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class RegistrationValidator implements Validator {
 	@Override
 	public void validate(Object target, Errors errors) {
 		
-		UserOrganization userOrganization = (UserOrganization) target;
+		RegistrationInfo userOrganization = (RegistrationInfo) target;
 		
 		//-------------Проверка не было ли поле логина оставлено пустым
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login", "login.empty", "Необходимо ввести логин!");
@@ -101,17 +101,19 @@ public class RegistrationValidator implements Validator {
 				
 				
 		//-------------Проверка положительности ИНН
-		if(userOrganization.getInn() != null && userOrganization.getInn() <= 0){
-			errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
-		}else{
-			
-		//-------------Проверка ИНН на дублированность
-			Organization serchinOrganization = new Organization();
-			serchinOrganization.setInn(userOrganization.getInn());
-			List<Organization> organizationList = dao.findOwners(serchinOrganization);
-			//Отлично, если ничего не найдено
-			if( ! organizationList.isEmpty()){
-				errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+		if(userOrganization.getInn() != null){
+			if(userOrganization.getInn() <= 0){
+				errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
+			}else{
+				
+			//-------------Проверка ИНН на дублированность
+				Organization serchinOrganization = new Organization();
+				serchinOrganization.setInn(userOrganization.getInn());
+				List<Organization> organizationList = dao.findOwners(serchinOrganization);
+				//Отлично, если ничего не найдено
+				if( ! organizationList.isEmpty()){
+					errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+				}
 			}
 		}
 		
