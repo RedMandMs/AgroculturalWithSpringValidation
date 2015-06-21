@@ -42,22 +42,22 @@ public class OrganizationValidator implements Validator {
 		OrganizationInfo organization = (OrganizationInfo) target;
 		
 		//-------------Проверка не было ли поле названия оставлено пустым
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "name.empty", "name must not be empty.");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "name.empty", "Необходимо ввести названние организации!");
 		
 		
 		//-------------Проверка количества символов в названии организации
 		if(organization.getName().trim().length() < 3 || organization.getName().trim().length() > 20){
-			errors.rejectValue("name", "WrongNameCompany");
+			errors.rejectValue("name", "WrongNameCompany", "Название организации должно содержать от 3 до 20 символов!");
 		}
 		
 		
 		//-------------Проверка не было ли поле ИНН оставлено пустым
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "inn", "inn.empty", "inn must not be empty.");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "inn", "inn.empty", "Необходимо ввести ИНН!");
 		
 		
 		//-------------Проверка положительности ИНН
 		if(organization.getInn() <= 0){
-			errors.rejectValue("inn", "NegativINN");
+			errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
 		}else{
 			
 			//-------------Проверка ИНН на дублированность
@@ -69,7 +69,7 @@ public class OrganizationValidator implements Validator {
 				//Иначе проверяем не один и тот же это паспорт (в списке может быть только один пасспорт, т.к. ИНН не дублируются)
 				if( ! organization.getId().equals(organizationList.get(0).getId())){
 					//Если это разные паспорта, то добавляем сообщение об ошибке
-					errors.rejectValue("inn", "CopyINN");
+					errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
 				}
 			}
 		}

@@ -43,38 +43,40 @@ public class PassportValidator implements Validator{
 	        PassportInfo passportInfo = (PassportInfo) target;
 
 	        //-------------Проверка на положительность кадастрового номера
-	        if (passportInfo.getCadastrNumber() != null && passportInfo.getCadastrNumber() <= 0) {
-	            errors.rejectValue("cadastrNumber", "cadastrNumber.isNegative");
-	        }else{
+	        if (passportInfo.getCadastrNumber() != null) {
+	        	if(passportInfo.getCadastrNumber() <= 0){
+	            errors.rejectValue("cadastrNumber", "cadastrNumber.isNegative", "Кадастровый номер должен иметь положительное значение");
+	        	}else{
 	        	
-	        	//-------------Проверка на копию кадастрового номера
-		        //Проверяем, нету ли в БД паспорта с таким  кадастровым номером
-	        	Passport serchingPassport = new Passport();
-	        	serchingPassport.setCadastrNumber(passportInfo.getCadastrNumber());
-	        	List<Passport> findingPasports = dao.findPassports(serchingPassport);
-	        	//Если есть
-	        	if( ! findingPasports.isEmpty()){
-	        		//Если у пасспорта есть id - значит этот паспорт редактируется, иначе - создаётся
-	    	        if(passportInfo.getId() != null){
-	    	        	//Если паспорт редактируется, то необходимо проверить не тот же ли это паспорт (что означает кадастровый номер не изменялся)
-	    	        	if( ! passportInfo.getId().equals(findingPasports.get(0).getId())){
-	    	        		//Если это разные паспорта, то добавляем ошибку
-	    	        		errors.rejectValue("cadastrNumber", "cadastrNumber.copy");
-	    	        	}
-	    	        }else{
-	    	        	//Если создаётся, то это ошибка
-	    	        	errors.rejectValue("cadastrNumber", "cadastrNumber.copy");
-	    	        }
-	        	}
+		        	//-------------Проверка на копию кадастрового номера
+			        //Проверяем, нету ли в БД паспорта с таким  кадастровым номером
+		        	Passport serchingPassport = new Passport();
+		        	serchingPassport.setCadastrNumber(passportInfo.getCadastrNumber());
+		        	List<Passport> findingPasports = dao.findPassports(serchingPassport);
+		        	//Если есть
+		        	if( ! findingPasports.isEmpty()){
+		        		//Если у пасспорта есть id - значит этот паспорт редактируется, иначе - создаётся
+		    	        if(passportInfo.getId() != null){
+		    	        	//Если паспорт редактируется, то необходимо проверить не тот же ли это паспорт (что означает кадастровый номер не изменялся)
+		    	        	if( ! passportInfo.getId().equals(findingPasports.get(0).getId())){
+		    	        		//Если это разные паспорта, то добавляем ошибку
+		    	        		errors.rejectValue("cadastrNumber", "cadastrNumber.copy", "Паспорт с таким кадастровым номером уже зарегистрирован!");
+		    	        	}
+		    	        }else{
+		    	        	//Если создаётся, то это ошибка
+		    	        	errors.rejectValue("cadastrNumber", "cadastrNumber.copy", "Паспорт с таким кадастровым номером уже зарегистрирован!");
+		    	        }
+		        	}
+		        }
 	        }
 	      
         	//-------------Проверка не было ли поле площади оставлено пустым
-        	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "area", "area.empty", "area must not be empty.");
+        	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "area", "area.empty", "Необходимо указать площадь поля!");
         	
         	
         	//-------------Проверка на положительность площади
-        	if (passportInfo.getArea() <= 0) {
-	            errors.rejectValue("area", "area.isNegative");
+        	if (passportInfo.getArea() != null && passportInfo.getArea() <= 0) {
+	            errors.rejectValue("area", "area.isNegative", "Площадь поля должна иметь положительное значение");
 	        }
 	}
 

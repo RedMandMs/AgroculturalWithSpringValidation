@@ -6,7 +6,7 @@
 <html>
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Просмотр пасспорта</title>
+	<title>Изменение информации о пасспорте</title>
 	</head>
 	<body>
 		<div align="center" >
@@ -18,7 +18,7 @@
 				<input type="submit" name="backToPassportsListBtn" value="Назад к информации о паспорте"/>
 			</form>
 			<h1>Изменение данных о пасспорте:</h1>
-			<c:forEach var="message" items="${messagesEditPassportEror}">
+			<c:forEach var="message" items="${erorMessagesEditPassport}">
 				<h4>${message}</h4>
 			</c:forEach>
 			<a>${message}</a>

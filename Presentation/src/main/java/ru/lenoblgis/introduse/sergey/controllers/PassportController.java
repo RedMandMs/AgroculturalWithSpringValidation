@@ -65,8 +65,7 @@ public class PassportController {
 	@RequestMapping(value = "/{passportId}", method = RequestMethod.GET)
     public String reviewPassport(@PathVariable Integer passportId, ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
 		
@@ -105,19 +104,17 @@ public class PassportController {
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.GET)
     public String editPassportForm(@PathVariable Integer passportId, ModelMap model) {
 				
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
 		
 		PassportInfo changedPassport;
 		
-		if(session.getAttribute("changePassportInfo") != null){
-			session.removeAttribute("changePassportInfo");
+		if(session.getAttribute("incorrectPassport") != null){
 			changedPassport = (PassportInfo) session.getAttribute("incorrectPassport");
 			session.removeAttribute("incorrectPassport");
 		}else{
-			session.removeAttribute("messagesEditPassportEror");
+			session.removeAttribute("erorMessagesEditPassport");
 			changedPassport = passportService.reviewPassport(passportId, myCompany);
 			model.addAttribute("message", "Введите новые данные о пасспорте:");
 		}
@@ -141,17 +138,17 @@ public class PassportController {
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
     public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) {
 		
+		HttpSession session = getSession();
+		
+		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
+		List<String> erorMessageList = new ArrayList<>();
 		if( ! erorList.isEmpty()){
-			for(ObjectError eror : erorList){
-				String message = rbms.getMessage(eror.getCode(), eror.getArguments(), Locale.getDefault());
-				System.out.println(message);
-			}
+			erorMessageList = getListMessageForEror(erorList);
+			session.setAttribute("incorrectPassport", changedPassport);
+			session.setAttribute("erorMessagesEditPassport", erorMessageList);
 			return "redirect:/passport/change_passport_info/"+changedPassport.getId();
 		}
-		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
 		
 		//Если паспорт изменён, то изменяем список своих паспортов
 		if(passportService.editPassport(changedPassport)){
@@ -162,12 +159,9 @@ public class PassportController {
 					myPassportList.add(changedPassport);
 				}
 			}
-			return "redirect:/passport/"+changedPassport.getId();
-		}else{
-			session.setAttribute("changePassportInfo", false);
-			session.setAttribute("incorrectPassport", changedPassport);
-			return "redirect:/passport/change_passport_info/"+changedPassport.getId();
 		}
+		
+		return "redirect:/passport/"+changedPassport.getId();
 	}
 	
 	/**
@@ -178,8 +172,7 @@ public class PassportController {
 	@RequestMapping(value = "createPassport", method = RequestMethod.GET)
     public String showFormCreatePassport(ModelMap model) {
 
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		PassportInfo createdPassport = (PassportInfo) session.getAttribute("incorrectPassport");
 		
@@ -205,8 +198,7 @@ public class PassportController {
 	@RequestMapping(value = "/createPassport", method = RequestMethod.POST)
     public String createPassport(PassportInfo createdPassport, ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		session.removeAttribute("messagesCreateEror");
 		
@@ -237,8 +229,7 @@ public class PassportController {
 	@RequestMapping(value = "/mylistpassports", method = RequestMethod.GET)
     public String showMyPassportsList(ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		session.setAttribute("lastList", "mylistpassports");
 		
@@ -254,8 +245,7 @@ public class PassportController {
 	@RequestMapping(value = "/findlistpassports", method = RequestMethod.GET)
     public String findPassportsList(ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		session.setAttribute("lastList", "findlistpassports");
 		
@@ -277,8 +267,7 @@ public class PassportController {
 	@RequestMapping(value = "/findlistpassports", method = RequestMethod.POST)
     public String findPassports(PassportInfo serchingPassport, ModelMap model) {
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		List<PassportInfo> findPassports = passportService.findPassports(serchingPassport);
 		session.setAttribute("findPassportsList", findPassports);
@@ -299,8 +288,7 @@ public class PassportController {
 		
 		passportService.deletePassport(idPassport);
 		
-		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
-		HttpSession session = attr.getRequest().getSession(true); // true == allow create
+		HttpSession session = getSession();
 		
 		List<Integer> myIdPasports = (List<Integer>) session.getAttribute("myIdPasports");
 		myIdPasports.remove(idPassport);
@@ -315,26 +303,32 @@ public class PassportController {
 		return "redirect:/passport/"+ lastList;
 	}
 	
-	/**
-	 * Получить список сообщений по заданным ошибкам при создании или редактировании пасспорта
-	 * @param listEror - список ошибок
-	 * @return - список сообщений
-	 */
-	private List<String> getPassportEror(List<String> listEror) {
-		List<String> listMessage = new ArrayList<String>();
-		for(String eror : listEror){
-			switch(eror){
-				case("CopyCadastrNumber"):
-					listMessage.add("Пасспорт с таким кадастровым номером уже существует!");
-					break;
-				case("NegativeArea"):
-					listMessage.add("Площадь поля должна быть положительным значением!");
-					break;		
-				case("NegativCadastrNumber"):
-					listMessage.add("Кадастровый номер должен быть положительным значением!");
-					break;		
+	private HttpSession getSession() {
+		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
+		return attr.getRequest().getSession(true); // true == allow create
+	}
+	
+	private List<String> getListMessageForEror(List<ObjectError> listEror){
+		List<String> messages = new ArrayList<>();
+		for(ObjectError error : listEror){
+			
+			//Если невозможно считать значение поля
+			if(error.getCode().equals("typeMismatch")){
+				String code = error.getCodes()[1];
+				String[] partsEror = code.split("\\.");
+				String field = partsEror[partsEror.length-1];
+				if(field.equals("cadastrNumber")){
+					messages.add("Некорректно введен кадастровый номер!");
+				}else{
+					if(field.equals("area")){
+						messages.add("Некорректно введена площадь поля!");
+					}
+				}
+			}else{
+				messages.add(error.getDefaultMessage());
 			}
 		}
-		return listMessage;
+		
+		return messages;
 	}
 }
