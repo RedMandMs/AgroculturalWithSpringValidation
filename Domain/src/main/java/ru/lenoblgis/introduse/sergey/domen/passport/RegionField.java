@@ -18,13 +18,70 @@ public enum RegionField implements Serializable{
 	 */
 	UNKNOWN("Neizv", "Неизвестно"),
 	/**
-	 * Всеволожский регион
+	 * Всеволожский район
 	 */
-	VSEVOLOGSK("vsevologskiy", "Всеволожский район"),
+	VSEVOLOGSKIY("vsevologskiy", "Всеволожский район"),
 	/**
-	 * Приозерский регион
+	 * Приозерский район
 	 */
-	PRIZEMSK("Prizemskiy", "Приозерский район");
+	PRIZEMSKIY("Prizemskiy", "Приозерский район"),
+	/**
+	 * Волосовский район
+	 */
+	VOLOSOVSKIY("volosovskiy", "Волосовский район"),
+	/**
+	 * Волховский район
+	 */
+	VOLHOVSKIY("volhovskiy", "Волховский район"),
+	/**
+	 * Выборгский район
+	 */
+	VIBORSKIY("viborskiy", "Выборгский район"),
+	/**
+	 * Гатчинский район
+	 */
+	GATCHINSKIY("gatchinskiy", "Гатчинский район"),
+	/**
+	 * Кингисеппский район
+	 */
+	KINGISEPPSKIY("kingiseppskiy", "Кингисеппский район"),
+	/**
+	 * Киришский район
+	 */
+	KIRISHSKIY("kirishskiy", "Киришский район"),
+	/**
+	 * Кировский район
+	 */
+	KIROVVSKIY("kirovskiy", "Кировский район"),
+	/**
+	 * Ломоносовский район
+	 */
+	LOMONOSOVSKIY("lomonosovskiy", "Ломоносовский район"),
+	/**
+	 * Лужский район
+	 */
+	LUZHSKIY("luzhskiy", "Лужский район"),
+	/**
+	 * Подпорожский район
+	 */
+	PODPOROZHSKIY("podporozhskiy", "Подпорожский район"),
+	/**
+	 * Сланцевский район
+	 */
+	SLANCEVSKIY("slancevskiy", "Сланцевский район"),
+	/**
+	 * Тихвинский район
+	 */
+	TIHOVSKIY("tihovskiy", "Тихвинский район"),
+	/**
+	 * Тосненский район
+	 */
+	TOSNENSKIY("tosnenskiy", "Тосненский район"),
+	/**
+	 * Бокситогорский район
+	 */
+	BOKSITOGORSKIY("boksitogorskiy", "Бокситогорский район");
+	
 	
 	/**
 	 * Главный конструктор

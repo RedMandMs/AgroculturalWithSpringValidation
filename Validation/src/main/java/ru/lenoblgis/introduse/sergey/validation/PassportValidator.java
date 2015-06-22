@@ -33,9 +33,14 @@ public class PassportValidator implements Validator{
 	}
 
 	/**
-	 * Валидация паспорта - корректность 
-	 * кадастрового номера (не копируется и не отрицательный) 
-	 * и площади(не отрицательная)
+	 * Валидация паспорта:
+	 * Проверка на положительность кадастрового номера
+	 * Проверка на копию кадастрового номера
+	 * Проверка не было ли поле площади оставлено пустым
+	 * Проверка на положительность площади
+	 * Проверка выбора типа поля
+	 * Проверка выбора района поля
+	 * 
 	 */
 	@Override
 	public void validate(Object target, Errors errors) {
@@ -70,6 +75,7 @@ public class PassportValidator implements Validator{
 		        }
 	        }
 	      
+	        
         	//-------------Проверка не было ли поле площади оставлено пустым
         	ValidationUtils.rejectIfEmptyOrWhitespace(errors, "area", "area.empty", "Необходимо указать площадь поля!");
         	
@@ -78,6 +84,18 @@ public class PassportValidator implements Validator{
         	if (passportInfo.getArea() != null && passportInfo.getArea() <= 0) {
 	            errors.rejectValue("area", "area.isNegative", "Площадь поля должна иметь положительное значение");
 	        }
+        	
+        	
+        	//-------------Проверка выбора типа поля
+        	if(passportInfo.getType().trim().equals("")){
+        		errors.rejectValue("type", "type.isNotChoose", "Необходимо выбрать тип поля!");
+        	}
+        	
+        	
+        	//-------------Проверка выбора района поля
+        	if(passportInfo.getRegion().trim().equals("")){
+        		errors.rejectValue("region", "region.isNotChoose", "Необходимо выбрать Регион!");
+        	}
 	}
 
 }

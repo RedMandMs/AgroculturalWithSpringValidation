@@ -270,7 +270,7 @@ public class PassportController {
 	 * @return - путь к запрашиваемому ресурсу
 	 */
 	@RequestMapping(value = "/findlistpassports", method = RequestMethod.GET)
-    public String findPassportsList(ModelMap model) {
+    public String showFindPassportsListForm(ModelMap model) {
 		
 		HttpSession session = getSession();
 		
@@ -288,11 +288,10 @@ public class PassportController {
 	/**
 	 * Запрос на поиск папартов по параметрам
 	 * @param serchingPassport - образец пасспорта для поиска
-	 * @param model - список для отображения данных на странице
 	 * @return - путь к запрашиваемому ресурсу
 	 */
 	@RequestMapping(value = "/findlistpassports", method = RequestMethod.POST)
-    public String findPassports(PassportInfo serchingPassport, ModelMap model) {
+    public String findPassports(PassportInfo serchingPassport) {
 		
 		HttpSession session = getSession();
 		

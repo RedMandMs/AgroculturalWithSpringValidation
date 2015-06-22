@@ -3385,3 +3385,83 @@ INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed
 INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "йНЛОЮМХЪ"', inn=456}
 INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "йНЛОЮМХЪ"', inn=456}
 INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-63 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-63 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-63 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:38:43 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-60 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-60 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-60 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-59 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-59 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 15:34:18 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 20 ms
+INFO http-bio-8080-exec-70 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-79 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-79 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-79 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-79 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-79 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-71 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-71 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO localhost-startStop-2 org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 15:50:12 MSK 2015]; root of context hierarchy
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-8 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 15:52:15 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 21 ms
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-16 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-16 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 15:57:21 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 32 ms
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-19 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-19 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-19 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (ADDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1086, idOwner=95, cadastrNumber=null}
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Created passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1086, idOwner=95, cadastrNumber=null}
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1086, idOwner=95, cadastrNumber=null}
+INFO http-bio-8080-exec-23 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1086, idOwner=95, cadastrNumber=null}
+INFO http-bio-8080-exec-21 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-21 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 15:59:53 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 15 ms
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 16:02:45 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-29 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-29 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-29 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-29 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-29 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 16:04:17 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 16:04:39 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-34 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ннн "Company"', inn=456}
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
