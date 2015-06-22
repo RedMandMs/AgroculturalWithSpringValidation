@@ -38,17 +38,17 @@ public class UserService implements Serializable{
 	
 	/**
 	 * Зарегистрировать пользователя и компанию
-	 * @param userOrganization - объект представляющий пользователя и организацию, указанную при регистрации
+	 * @param registrationInfo - объект представляющий пользователя и организацию, указанную при регистрации
 	 * @return - информация о созданной организации
 	 */
-	public OrganizationInfo registration(RegistrationInfo userOrganization){
+	public OrganizationInfo registration(RegistrationInfo registrationInfo){
 		
 		OrganizationInfo organizationInfo = new OrganizationInfo();
 		
-		User user = new User(userOrganization.getLogin(), userOrganization.getPassword(), UserRole.USER);
+		User user = new User(registrationInfo.getLogin(), registrationInfo.getPassword(), UserRole.USER);
 			
-		Owner organization = new Organization(userOrganization.getOrganizationName(), 
-					userOrganization.getInn(), userOrganization.getAddress());
+		Owner organization = new Organization(registrationInfo.getOrganizationName(), 
+					registrationInfo.getInn(), registrationInfo.getAddress());
 			
 		//Кодировка пароля
 		String coddingPassword = new Md5PasswordEncoder().encodePassword(user.getPassword(), "");

@@ -47,20 +47,20 @@ public class RegistrationValidator implements Validator {
 	@Override
 	public void validate(Object target, Errors errors) {
 		
-		RegistrationInfo userOrganization = (RegistrationInfo) target;
+		RegistrationInfo registrationInfo = (RegistrationInfo) target;
 		
 		//-------------Проверка не было ли поле логина оставлено пустым
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login", "login.empty", "Необходимо ввести логин!");
 		
 		
 		//-------------Проверка корректности логина
-		if(userOrganization.getLogin() != null && (userOrganization.getLogin().trim().length() < 4 || userOrganization.getLogin().trim().length() > 15)){
+		if(registrationInfo.getLogin() != null && (registrationInfo.getLogin().trim().length() < 4 || registrationInfo.getLogin().trim().length() > 15)){
 			errors.rejectValue("login", "login.wrongFormat", "Логин должен содержать от 4 до 15 символов!");
 		}else{
 			
 			//-------------Проверка уникальности логина
 			User user = new User();
-			user.setLogin(userOrganization.getLogin().trim());
+			user.setLogin(registrationInfo.getLogin().trim());
 			user = dao.findUserByLogin(user.getLogin());
 			
 			if(user != null){
@@ -74,12 +74,12 @@ public class RegistrationValidator implements Validator {
 		
 		
 		//-------------Проверка корректности пароля
-		if(userOrganization.getPassword() != null && (userOrganization.getPassword().trim().length() < 4 || userOrganization.getPassword().trim().length() > 15)){
+		if(registrationInfo.getPassword() != null && (registrationInfo.getPassword().trim().length() < 4 || registrationInfo.getPassword().trim().length() > 15)){
 			errors.rejectValue("password", "password.wrongFormat", "Пароль должен содержать от 4 до 15 символов!");
 		}else{
 			
 			//-------------Проверка совпадения пароля при повторном вводе
-			if( ! userOrganization.getPassword().equals(userOrganization.getRepassword())){
+			if( ! registrationInfo.getPassword().equals(registrationInfo.getRepassword())){
 				errors.rejectValue("repassword", "repassword.wrongRePassword", "Пароль и его подтверждение различаются!");
 			}
 		}
@@ -91,13 +91,13 @@ public class RegistrationValidator implements Validator {
 				
 				
 		//-------------Проверка количества символов в названии организации
-		if(userOrganization.getOrganizationName().trim().length() < 3 || userOrganization.getOrganizationName().trim().length() > 20){
+		if(registrationInfo.getOrganizationName().trim().length() < 3 || registrationInfo.getOrganizationName().trim().length() > 20){
 			errors.rejectValue("organizationName", "name.wrongFormat", "Название организации должно содержать от 3 до 20 символов!");
 		}else{
 			
 			//-------------Проверка имени компании на дублированност
 			Organization findingOrganization = new Organization();
-			findingOrganization.setName(userOrganization.getOrganizationName());
+			findingOrganization.setName(registrationInfo.getOrganizationName());
 			List<Organization> organizations = dao.findOwners(findingOrganization);
 			//Если найдена организация (в списке может быть только одна, т.к. соблюдается уникальность названий компаний)
 			if( ! organizations.isEmpty()){
@@ -112,14 +112,14 @@ public class RegistrationValidator implements Validator {
 				
 				
 		//-------------Проверка положительности ИНН
-		if(userOrganization.getInn() != null){
-			if(userOrganization.getInn() <= 0){
+		if(registrationInfo.getInn() != null){
+			if(registrationInfo.getInn() <= 0){
 				errors.rejectValue("inn", "inn.isNegative", "ИНН должен иметь положительное значение!");
 			}else{
 				
 			//-------------Проверка ИНН на дублированность
 				Organization serchinOrganization = new Organization();
-				serchinOrganization.setInn(userOrganization.getInn());
+				serchinOrganization.setInn(registrationInfo.getInn());
 				List<Organization> organizationList = dao.findOwners(serchinOrganization);
 				//Отлично, если ничего не найдено
 				if( ! organizationList.isEmpty()){

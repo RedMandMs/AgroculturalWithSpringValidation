@@ -1,13 +1,12 @@
 package ru.lenoblgis.introduse.sergey.domen.owner;
 
-import java.io.Serializable;
 
 /**
  * Интерфейс для реализации конкретных владельцов паспортов (организаций, частных лиц и т.д.)
  * @author VILGODSKIY
  *
  */
-public interface Owner extends Serializable{
+public interface Owner{
 
 	/**
 	 * Получить id владельца

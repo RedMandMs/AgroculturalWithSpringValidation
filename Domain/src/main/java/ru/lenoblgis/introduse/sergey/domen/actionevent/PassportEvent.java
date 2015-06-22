@@ -1,7 +1,5 @@
 package ru.lenoblgis.introduse.sergey.domen.actionevent;
 
-import java.io.Serializable;
-
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
@@ -14,7 +12,7 @@ import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
  * @author VILGODSKIY
  *
  */
-public class PassportEvent implements Serializable{
+public class PassportEvent{
 	
 	/**
 	 * Id события

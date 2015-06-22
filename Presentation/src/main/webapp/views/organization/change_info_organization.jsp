@@ -1,49 +1,49 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=Cp1251"
+    pageEncoding="Cp1251"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>РР·РјРµРЅРµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РєРѕРјРїР°РЅРёРё</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+		<title>Изменение информации о компании</title>
 	</head>
 	<body>
 		<div align="center" >
 			<form name="goReviewCompanyForm" action="<c:url value='/organization/company/mycompany' />" method='GET'>
-		 		<input type="submit" name="reviewMyCompanyBtn" value="РќР°Р·Р°Рґ Рє РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРІРѕРµР№ РєРѕРјРїР°РЅРёРё">
+		 		<input type="submit" name="reviewMyCompanyBtn" value="Назад к информации о своей компании">
 			</form>
 			<br>
 			<div>
-				<h1>РР·РјРµРЅРµРЅРёРµ РґР°РЅРЅС‹С… Рѕ РєРѕРјРїР°РЅРёРё:</h1>	
+				<h1>Изменение данных о компании:</h1>	
 				<c:forEach var="message" items="${editOrganizationErors}">
 					<h4>${message}</h4>
 				</c:forEach>
-				<sf:form method="POST" modelAttribute="changedCompany">
+				<sf:form method="POST" modelAttribute="changedCompany" acceptCharset="Cp1251">
 					<fieldset>
 						<table>
 							<tr>
-								<th><label for="id_organization">Id РєРѕРјРїР°РЅРёРё: </label></th>
+								<th><label for="id_organization">Id компании: </label></th>
 								<td><sf:input readonly="true" path="id" size="20" id="id_organization" value="${myCompany.getId()}"/></td>
 							</tr>
 							
 							<tr>
-								<th><label for="name_organization">Р’РІРµРґРёС‚Рµ РёРјСЏ РєРѕРјРїР°РЅРёРё: </label></th>
+								<th><label for="name_organization">Введите имя компании: </label></th>
 								<td><sf:input path="name" size="20" id="name_organization" value="${myCompany.getName()}"/></td>
 							</tr>
 							
 							<tr>
-								<th><label for="inn">Р’РІРµРґРёС‚Рµ РРќРќ РєРѕРјРїР°РЅРёРё: </label></th>
+								<th><label for="inn">Введите ИНН компании: </label></th>
 								<td><sf:input path="inn" size="20" id="inn" value="${myCompany.getInn()}"/></td>
 							</tr>
 							
 							<tr>
-								<th><label for="organization_address">Р’РІРµРґРёС‚Рµ Р°РґСЂРµСЃ РєРѕРјРїР°РЅРёРё: </label></th>
+								<th><label for="organization_address">Введите адрес компании: </label></th>
 								<td><sf:input path="address" size="50" id="organization_address" value="${myCompany.getAddress()}"/></td>
 							</tr>
 							
 							<tr>
-								<td><input type="submit" name="changedBtn" value="РР·РјРµРЅРёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РєРѕРјРїР°РЅРёРё"></td>
+								<td><input type="submit" name="changedBtn" value="Изменить информацию о компании"></td>
 							</tr>
 						</table>
 					</fieldset>

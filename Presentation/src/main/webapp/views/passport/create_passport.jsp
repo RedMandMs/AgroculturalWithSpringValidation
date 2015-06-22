@@ -1,34 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=Cp1251"
+    pageEncoding="Cp1251"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <html>
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>РџСЂРѕСЃРјРѕС‚СЂ РїР°СЃСЃРїРѕСЂС‚Р°</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<title>Просмотр пасспорта</title>
 	</head>
 	<body>
 		<div align="center" >
 			<form name="goReviewCompanyForm" action="<c:url value='/organization/company/mycompany' />" method='GET'>
-		 		<input type="submit" name="reviewMyCompanyBtn" value="РќР°Р·Р°Рґ Рє РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРІРѕРµР№ РєРѕРјРїР°РЅРёРё">
+		 		<input type="submit" name="reviewMyCompanyBtn" value="Назад к информации о своей компании">
 			</form>
 			<br>
 			<div>
-				<h1>РЎРѕР·РґР°РЅРёРµ РїР°СЃРїРѕСЂС‚Р°:</h1>	
+				<h1>Создание паспорта:</h1>	
 				<c:forEach var="message" items="${messagesCreateEror}">
 					<h4>${message}</h4>
 				</c:forEach>
-				<sf:form method="POST" modelAttribute="createdPassport" acceptCharset="UTF-8">
+				<sf:form method="POST" modelAttribute="createdPassport" acceptCharset="Cp1251">
 					<fieldset>
 						<table>
 							<tr>
-								<td>РљРѕРјРїР°РЅРёСЏ-РІР»Р°РґРµР»РµС† РїР°СЃРїРѕСЂС‚Р°: </td>
+								<td>Компания-владелец паспорта: </td>
 								<td>${myCompany.getName()}</td>
 							</tr>
 						
 							<tr>
-								<th><label for="region">Р’РІРµРґРёС‚Рµ СЂРµРіРёРѕРЅ РїРѕР»СЏ: </label></th>
+								<th><label for="region">Введите регион поля: </label></th>
 								<td>
 									<sf:select path="region" id="region">
 										<c:forEach var="region" items="${regions}">
@@ -39,17 +39,17 @@
 							</tr>
 							
 							<tr>
-								<th><label for="cadastrNumber">Р’РІРµРґРёС‚Рµ РєР°РґР°СЃС‚СЂРѕРІС‹Р№ РЅРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: </label></th>
+								<th><label for="cadastrNumber">Введите кадастровый номер паспорта: </label></th>
 								<td><sf:input path="cadastrNumber" size="20" id="cadastrNumber" value="${creatingPassport.getCadastrNumber()}"/></td>
 							</tr>
 							
 							<tr>
-								<th><label for="area">Р’РІРµРґРёС‚Рµ РїР»РѕС‰Р°РґСЊ РїРѕР»СЏ: </label></th>
+								<th><label for="area">Введите площадь поля: </label></th>
 								<td><sf:input path="area" size="50" id="area" value="${creatingPassport.getArea()}"/></td>
 							</tr>
 							
 							<tr>
-								<th><label for="type">Р’РІРµРґРёС‚Рµ С‚РёРї РїРѕР»СЏ: </label></th>
+								<th><label for="type">Введите тип поля: </label></th>
 								<td>
 									<sf:select path="type" id="type">
 										<c:forEach var="type" items="${types}">
@@ -60,12 +60,12 @@
 							</tr>
 							
 							<tr>
-								<th><label for="comment">Р’РІРµРґРёС‚Рµ РєРѕРјРјРµРЅС‚Р°СЂРёР№ Рє РїР°СЃСЃРїРѕСЂС‚Сѓ: </label></th>
+								<th><label for="comment">Введите комментарий к пасспорту: </label></th>
 								<td><sf:input path="comment" size="50" id="comment" value="${creatingPassport.getComment()}"/></td>
 							</tr>
 							
 							<tr>
-								<td><input type="submit" name="changedBtn" value="РЎРѕР·РґР°С‚СЊ РїР°СЃСЃРїРѕСЂС‚"></td>
+								<td><input type="submit" name="changedBtn" value="Создать пасспорт"></td>
 							</tr>
 						</table>
 					</fieldset>

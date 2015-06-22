@@ -1,9 +1,8 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.passportinfo;
 
-import java.io.Serializable;
 
 
-public class PassportInfo implements Serializable{
+public class PassportInfo{
 
 	
 	/**

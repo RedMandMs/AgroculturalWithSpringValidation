@@ -2893,3 +2893,495 @@ INFO http-bio-8080-exec-56 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed 
 INFO http-bio-8080-exec-56 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
 INFO http-bio-8080-exec-56 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
 INFO http-bio-8080-exec-56 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-72 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-74 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='SergeyLOG', but he wasn't find!
+INFO http-bio-8080-exec-74 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='SergeyLOG', but he wasn't find!
+INFO http-bio-8080-exec-74 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='SergeyLOG', but he wasn't find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-78 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 11:29:02 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 18 ms
+INFO http-bio-8080-exec-80 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=66, name='SergeyCompany3', inn=24231515}
+INFO http-bio-8080-exec-80 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-87 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=66, name='SergeyCompany3', inn=24231515}
+INFO http-bio-8080-exec-87 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=66, name='SergeyCompany3', inn=24231515}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=42, name='SpringAction', inn=1546887}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-82 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 12:01:19 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 12:11:22 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO localhost-startStop-2 org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 12:15:24 MSK 2015]; root of context hierarchy
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='Foo', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=96}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1071, idOwner=91, cadastrNumber=59}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=78, name='UserCompany2', inn=365554546}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (ADDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Created passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-7 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=63, name='LimboCompany2', inn=157654834}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=63, name='LimboCompany8', inn=157654834}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=63, name='LimboCompany8', inn=157654834}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=63, name='LimboCompany8', inn=157654834}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=78, name='UserCompany2', inn=365554546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=78, name='UserCompany2', inn=365554546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO localhost-startStop-2 org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 12:30:13 MSK 2015]; root of context hierarchy
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='admin' and he was find!
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=94, name='AdminOrganizatio', inn=123789}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=78, name='UserCompany2', inn=365554546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=93, name='BestCompany2', inn=12546}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1067, idOwner=87, cadastrNumber=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=88, name='FooCompany', inn=584921}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 13:02:53 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='LastUser' and he was find!
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='LastUser' and he was find!
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-10 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 13:59:22 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 21 ms
+INFO http-bio-8080-exec-20 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-14 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-14 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-16 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-16 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO localhost-startStop-2 org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:03:54 MSK 2015]; root of context hierarchy
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO localhost-startStop-1 org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 31 ms
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-6 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=46, name='GoodCompany', inn=56748}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:08:13 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 23 ms
+INFO http-bio-8080-exec-2 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-5 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-8 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-8 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-8 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-3 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-4 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-9 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1085, idOwner=91, cadastrNumber=12}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-15 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-15 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:09:17 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-13 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-1 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-24 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-24 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:12:00 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 15 ms
+INFO http-bio-8080-exec-20 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-22 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-26 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-26 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:15:32 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 15 ms
+INFO http-bio-8080-exec-16 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-32 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-28 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-28 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:16:24 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-34 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='FooUser' and he was find!
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=91, name='FooUserCompany2', inn=1}
+INFO http-bio-8080-exec-12 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-42 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-42 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:17:17 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-42 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='LastUser' and he was find!
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='LastUser' and he was find!
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-37 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-40 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-40 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-40 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-38 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-38 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-38 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-46 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-46 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-46 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-46 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-46 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-39 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-39 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-39 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-48 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-48 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-48 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (EDITION) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=87, name='LastUserCompany', inn=5484621}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Added event (REVIEW) about passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO http-bio-8080-exec-50 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed passport: ru.lenoblgis.introduse.sergey.domen.passport.Passport{id=1068, idOwner=87, cadastrNumber=36}
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.context.support.AnnotationConfigWebApplicationContext - Closing Root WebApplicationContext: startup date [Mon Jun 22 14:22:39 MSK 2015]; root of context hierarchy
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization started
+INFO ContainerBackgroundProcessor[StandardEngine[Catalina]] org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherAgrocultural': initialization completed in 16 ms
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook', but he wasn't find!
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Created organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ОАО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - User: ru.lenoblgis.introduse.sergey.domen.user.User{id=0, login='Hook', organizationId=95, role=USER} was created successfuk in data base!
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Registration user: ru.lenoblgis.introduse.sergey.domen.user.User{id=17, login='Hook', organizationId=95, role=USER} was execute successful!
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ОАО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed finding user by login='Hook' and he was find!
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ОАО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ОАО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ОАО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Edited organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ООО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Reviwed organization: ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization{id=95, name='ООО "Компания"', inn=456}
+INFO http-bio-8080-exec-57 ru.lenoblgis.introduse.sergey.data.dao.DAO - Executed requare for finding passports

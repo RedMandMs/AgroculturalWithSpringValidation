@@ -1,12 +1,10 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.event;
 
-import java.io.Serializable;
-
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 
-public class EventInfo implements Serializable{
+public class EventInfo{
 
 	/**
 	 * Id события

@@ -16,7 +16,6 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Component;
 
 import ru.lenoblgis.introduse.sergey.data.dao.sqlQueries.SQLQueries;
-import ru.lenoblgis.introduse.sergey.data.dao.sqlQueries.SQLServerQueries;
 import ru.lenoblgis.introduse.sergey.domen.actionevent.PassportEvent;
 import ru.lenoblgis.introduse.sergey.domen.mappers.EventRowMapper;
 import ru.lenoblgis.introduse.sergey.domen.mappers.OrganizationRowMapper;

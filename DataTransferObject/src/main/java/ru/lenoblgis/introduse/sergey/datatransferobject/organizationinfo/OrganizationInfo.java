@@ -1,8 +1,7 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo;
 
-import java.io.Serializable;
 
-public class OrganizationInfo implements Serializable{
+public class OrganizationInfo{
 	
 	
 	
@@ -124,11 +123,7 @@ public class OrganizationInfo implements Serializable{
 	 * @param address - новый адрес организации
 	 */
 	public void setAddress(String address) {
-		if(address == null || address.trim() == ""){
-			this.address = "UNKNOWN";
-		}else{
-			this.address = address;			
-		}
+		this.address = address;
 	}
 
 	@Override

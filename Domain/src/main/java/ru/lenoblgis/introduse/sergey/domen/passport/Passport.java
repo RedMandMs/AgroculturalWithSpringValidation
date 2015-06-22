@@ -1,7 +1,5 @@
 package ru.lenoblgis.introduse.sergey.domen.passport;
 
-import java.io.Serializable;
-
 import ru.lenoblgis.introduse.sergey.domen.owner.Owner;
 
 /**
@@ -9,7 +7,7 @@ import ru.lenoblgis.introduse.sergey.domen.owner.Owner;
  * @author VILGODSKIY
  *
  */
-public class Passport implements Serializable {
+public class Passport{
 	
 	/**
 	 * Конструктор для отображения паспорта из БД

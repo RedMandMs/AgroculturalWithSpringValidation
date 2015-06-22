@@ -1,5 +1,6 @@
 package ru.lenoblgis.introduse.sergey.controllers;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +49,10 @@ public class RegistrationController {
     @Qualifier("registrationValidator")
     private Validator validator;
 	
+	/**
+	 * Регистрация валидатора для различных команд
+	 * @param binder - webDaStaBinder
+	 */
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
 	    binder.setValidator(validator);
@@ -85,11 +90,18 @@ public class RegistrationController {
 	 * Зарегестрировать
 	 * @param registrationInfo - Информация о пользователе и его организации
 	 * @return - отображение запрашиваемого ресурса
+	 * @throws UnsupportedEncodingException - ошибка о не правильной раскодировке
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public String registration(@Valid RegistrationInfo registrationInfo, BindingResult result){
+	public String registration(@Valid RegistrationInfo registrationInfo, BindingResult result) throws UnsupportedEncodingException{
 		
 		HttpSession session = getSession();
+		
+		//Преобразование русского текста в комментарии к паспорту
+		String name = new String (registrationInfo.getOrganizationName().getBytes ("ISO-8859-1"),"Cp1251");
+		registrationInfo.setOrganizationName(name);;
+		String address = new String (registrationInfo.getAddress().getBytes ("ISO-8859-1"),"Cp1251");
+		registrationInfo.setAddress(address);
 		
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();

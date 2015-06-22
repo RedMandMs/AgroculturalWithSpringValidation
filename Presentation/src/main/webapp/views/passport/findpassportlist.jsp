@@ -12,6 +12,13 @@
 		<div align="center">
 			<table align="center" >
 				<tr>
+					<c:if test="${isAdmin}">
+						<td>
+							<form name="goToManagePanel" action="<c:url value='/admin/managing' />" method='GET'>
+								<input type="submit" name="goToManagePanelBtn" value="Перейти в панель управления администратора">
+							</form>
+						</td>	
+					</c:if>
 					<td>
 						<form name="goReviewCompanyForm" action="<c:url value='/organization/company/mycompany' />" method='GET'>
 							<input type="submit" name="reviewMyCompanyBtn" value="Назад к информации о своей компании">

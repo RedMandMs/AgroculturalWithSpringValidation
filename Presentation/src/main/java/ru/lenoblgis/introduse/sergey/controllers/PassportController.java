@@ -1,5 +1,6 @@
 package ru.lenoblgis.introduse.sergey.controllers;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -39,6 +40,10 @@ public class PassportController {
     @Qualifier("passportValidator")
     private Validator validator;
 	
+	/**
+	 * –егистраци€ валидатора дл€ различных команд
+	 * @param binder - webDaStaBinder
+	 */
 	@InitBinder
 	private void initBinder(WebDataBinder binder) {
 	    binder.setValidator(validator);
@@ -134,11 +139,16 @@ public class PassportController {
 	 * @param changedPassport - измен€емый паспорт с новыми данными
 	 * @param model - список дл€ отображени€ данных на странице
 	 * @return - путь к запрашиваемому ресурсу
+	 * @throws UnsupportedEncodingException - ошибка о не правильной раскодировке
 	 */
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
-    public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) {
+    public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) throws UnsupportedEncodingException {
 		
 		HttpSession session = getSession();
+		
+		//ѕреобразование русского текста в комментарии к паспорту
+		String comment = new String (changedPassport.getComment().getBytes ("ISO-8859-1"),"Cp1251");
+		changedPassport.setComment(comment);
 		
 		//ѕолучаем сообщени€ об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
@@ -198,11 +208,16 @@ public class PassportController {
 	 * —оздать паспорт
 	 * @param model - список дл€ отображени€ данных на странице
 	 * @return - путь к запрашиваемому ресурсу
+	 * @throws UnsupportedEncodingException - ошибка о не правильной раскодировке
 	 */
 	@RequestMapping(value = "/createPassport", method = RequestMethod.POST)
-    public String createPassport(@Valid PassportInfo createdPassport, BindingResult result) {
+    public String createPassport(@Valid PassportInfo createdPassport, BindingResult result) throws UnsupportedEncodingException {
 		
 		HttpSession session = getSession();
+		
+		//ѕреобразование русского текста в комментарии к паспорту
+		String comment = new String (createdPassport.getComment().getBytes ("ISO-8859-1"),"Cp1251");
+		createdPassport.setComment(comment);
 		
 		//ѕолучаем сообщени€ об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();

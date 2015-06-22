@@ -209,7 +209,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     
     /**
      * Получчение бина для считывания сообщений об ошибках из файла pecources/WEB-INF/messeges/erormessages.properties
-     * @return
+     * @return - объект для работы с сообщениями об ошибках
      */
     @Bean
     public ResourceBundleMessageSource getResourceBundleMessageSource(){
