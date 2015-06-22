@@ -55,7 +55,7 @@ public class RegistrationValidator implements Validator {
 		
 		//-------------Проверка корректности логина
 		if(userOrganization.getLogin() != null && (userOrganization.getLogin().trim().length() < 4 || userOrganization.getLogin().trim().length() > 15)){
-			errors.rejectValue("login", "WrongFormatLogin", "Логин должен содержать от 4 до 15 символов!");
+			errors.rejectValue("login", "login.wrongFormat", "Логин должен содержать от 4 до 15 символов!");
 		}else{
 			
 			//-------------Проверка уникальности логина
@@ -64,7 +64,7 @@ public class RegistrationValidator implements Validator {
 			user = dao.findUserByLogin(user.getLogin());
 			
 			if(user != null){
-				errors.rejectValue("login", "CopyLogin", "Пользователь с таким логином уже зарегестрирован!");
+				errors.rejectValue("login", "login.copy", "Пользователь с таким логином уже зарегестрирован!");
 			}
 		}
 		
@@ -75,24 +75,35 @@ public class RegistrationValidator implements Validator {
 		
 		//-------------Проверка корректности пароля
 		if(userOrganization.getPassword() != null && (userOrganization.getPassword().trim().length() < 4 || userOrganization.getPassword().trim().length() > 15)){
-			errors.rejectValue("password", "WrongFormatPassword", "Пароль должен содержать от 4 до 15 символов");
+			errors.rejectValue("password", "password.wrongFormat", "Пароль должен содержать от 4 до 15 символов!");
 		}else{
 			
 			//-------------Проверка совпадения пароля при повторном вводе
 			if( ! userOrganization.getPassword().equals(userOrganization.getRepassword())){
-				errors.rejectValue("repassword", "WrongRePassword", "Пароль и его подтверждение различаются!");
+				errors.rejectValue("repassword", "repassword.wrongRePassword", "Пароль и его подтверждение различаются!");
 			}
 		}
 		
 		
 		
 		//-------------Проверка не было ли поле названия оставлено пустым
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "organizationName", "organizationName.empty", "Необходимо ввести названние организации!");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "organizationName", "name.empty", "Необходимо ввести названние организации!");
 				
 				
 		//-------------Проверка количества символов в названии организации
 		if(userOrganization.getOrganizationName().trim().length() < 3 || userOrganization.getOrganizationName().trim().length() > 20){
-			errors.rejectValue("organizationName", "WrongNameCompany", "Название организации должно содержать от 3 до 20 символов!");
+			errors.rejectValue("organizationName", "name.wrongFormat", "Название организации должно содержать от 3 до 20 символов!");
+		}else{
+			
+			//-------------Проверка имени компании на дублированност
+			Organization findingOrganization = new Organization();
+			findingOrganization.setName(userOrganization.getOrganizationName());
+			List<Organization> organizations = dao.findOwners(findingOrganization);
+			//Если найдена организация (в списке может быть только одна, т.к. соблюдается уникальность названий компаний)
+			if( ! organizations.isEmpty()){
+				//Тогда добавляем ошибку о копировании названия
+				errors.rejectValue("organizationName", "name.copy", "Организация с таким названием уже зарегестрирована!");
+			}
 		}
 		
 				
@@ -103,7 +114,7 @@ public class RegistrationValidator implements Validator {
 		//-------------Проверка положительности ИНН
 		if(userOrganization.getInn() != null){
 			if(userOrganization.getInn() <= 0){
-				errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
+				errors.rejectValue("inn", "inn.isNegative", "ИНН должен иметь положительное значение!");
 			}else{
 				
 			//-------------Проверка ИНН на дублированность
@@ -112,7 +123,7 @@ public class RegistrationValidator implements Validator {
 				List<Organization> organizationList = dao.findOwners(serchinOrganization);
 				//Отлично, если ничего не найдено
 				if( ! organizationList.isEmpty()){
-					errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+					errors.rejectValue("inn", "inn.copy", "Организация с таким ИНН уже зарегистрирована!");
 				}
 			}
 		}

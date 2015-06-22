@@ -214,7 +214,8 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public ResourceBundleMessageSource getResourceBundleMessageSource(){
     	ResourceBundleMessageSource rbms = new ResourceBundleMessageSource();
-    	rbms.setBasename("WEB-INF\\messages\\erormessages");
+    	rbms.setBasename("messages/erormessages");
+    	rbms.setDefaultEncoding("Cp1251");
     	return rbms;
     }
 }

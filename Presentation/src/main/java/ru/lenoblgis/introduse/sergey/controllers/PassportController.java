@@ -144,6 +144,7 @@ public class PassportController {
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
 		if( ! erorList.isEmpty()){
+			
 			erorMessageList = getListMessageForEror(erorList);
 			session.setAttribute("incorrectPassport", changedPassport);
 			session.setAttribute("erorMessagesEditPassport", erorMessageList);
@@ -332,21 +333,17 @@ public class PassportController {
 		List<String> messages = new ArrayList<>();
 		for(ObjectError error : listEror){
 			
+			String code;
 			//Если невозможно считать значение поля
 			if(error.getCode().equals("typeMismatch")){
-				String code = error.getCodes()[1];
-				String[] partsEror = code.split("\\.");
+				String fullcode = error.getCodes()[1];
+				String[] partsEror = fullcode.split("\\.");
 				String field = partsEror[partsEror.length-1];
-				if(field.equals("cadastrNumber")){
-					messages.add("Некорректно введен кадастровый номер!");
-				}else{
-					if(field.equals("area")){
-						messages.add("Некорректно введена площадь поля!");
-					}
-				}
+				code = field + ".typeMismatch";
 			}else{
-				messages.add(error.getDefaultMessage());
+				code = error.getCode();
 			}
+			messages.add(rbms.getMessage(code, null, Locale.getDefault()));
 		}
 		
 		return messages;

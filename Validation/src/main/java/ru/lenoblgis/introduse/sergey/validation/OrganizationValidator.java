@@ -33,6 +33,7 @@ public class OrganizationValidator implements Validator {
 	 * Валидация организации при изменении данных о ней:
 	 * Проверка не оставлено ли поле названия пустым
 	 * Проверка колличества символов в названии
+	 * Проверка имени компании на дублированность
 	 * Проверка не оставленно ли поле ИНН пустым
 	 * Проверка ИНН на положительность
 	 * Проверка ИНН на дублированность
@@ -47,7 +48,21 @@ public class OrganizationValidator implements Validator {
 		
 		//-------------Проверка количества символов в названии организации
 		if(organization.getName().trim().length() < 3 || organization.getName().trim().length() > 20){
-			errors.rejectValue("name", "WrongNameCompany", "Название организации должно содержать от 3 до 20 символов!");
+			errors.rejectValue("name", "name.wrongFormat", "Название организации должно содержать от 3 до 20 символов!");
+		}else{
+			
+			//-------------Проверка имени компании на дублированност
+			Organization findingOrganization = new Organization();
+			findingOrganization.setName(organization.getName());
+			List<Organization> organizations = dao.findOwners(findingOrganization);
+			//Если найдена организация (в списке может быть только одна, т.к. соблюдается уникальность названий компаний)
+			if( ! organizations.isEmpty()){
+				//Если это разные компании (иначе компания просто не меняла имени, поэтому ошибки нету)
+				if( ! organization.getId().equals(organizations.get(0).getId())){
+					//Тогда добавляем ошибку
+					errors.rejectValue("name", "name.copy", "Организация с таким названием уже зарегестрирована!");
+				}
+			}
 		}
 		
 		
@@ -58,7 +73,7 @@ public class OrganizationValidator implements Validator {
 		//-------------Проверка положительности ИНН
 		if(organization.getInn() != null){
 			if(organization.getInn() <= 0){
-				errors.rejectValue("inn", "NegativINN", "ИНН должен иметь положительное значение!");
+				errors.rejectValue("inn", "inn.isNegative", "ИНН должен иметь положительное значение!");
 			}else{
 				
 				//-------------Проверка ИНН на дублированность
@@ -70,7 +85,7 @@ public class OrganizationValidator implements Validator {
 					//Иначе проверяем не один и тот же это паспорт (в списке может быть только один пасспорт, т.к. ИНН не дублируются)
 					if( ! organization.getId().equals(organizationList.get(0).getId())){
 						//Если это разные паспорта, то добавляем сообщение об ошибке
-						errors.rejectValue("inn", "CopyINN", "Организация с таким ИНН уже зарегистрирована!");
+						errors.rejectValue("inn", "inn.copy", "Организация с таким ИНН уже зарегистрирована!");
 					}
 				}
 			}
