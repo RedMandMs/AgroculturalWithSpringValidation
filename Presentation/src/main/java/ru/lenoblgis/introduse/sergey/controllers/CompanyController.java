@@ -7,6 +7,9 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -33,6 +36,11 @@ import ru.lenoblgis.introduse.sergey.services.UserService;
 @Controller
 @RequestMapping(value="/organization")
 public class CompanyController {
+	
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(OwnerService.class);
 
 	/**
 	 * Сервис для работы с организациями
@@ -153,6 +161,8 @@ public class CompanyController {
 	@RequestMapping(value = "/company/change_organization_info", method = RequestMethod.POST)
     public String сhangeInfoOrganization(@Valid OrganizationInfo organizationInfo, BindingResult result) throws UnsupportedEncodingException {
 		
+		log.log(Level.INFO, DateTime.now() + "	User trying chenge information about organization(" + organizationInfo + ")");
+		
 		HttpSession session = getSession();
 		
 		//Преобразование русского текста в комментарии к паспорту
@@ -165,6 +175,7 @@ public class CompanyController {
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
 		if( ! erorList.isEmpty()){
+			log.log(Level.INFO, DateTime.now() + "	User can not change the information about organization("+organizationInfo+"), becouse to errors in filling fields");
 			erorMessageList = getListMessageForEror(erorList);
 			session.setAttribute("incorrectCompany", organizationInfo);
 			session.setAttribute("editOrganizationErors", erorMessageList);

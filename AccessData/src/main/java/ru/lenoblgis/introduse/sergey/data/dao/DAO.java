@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -132,7 +133,7 @@ public class DAO  {
 		jdbcTemplate.update(psc, keyHolder);
 		int id = keyHolder.getKey().intValue();
 		owner.setId(id);
-		log.log(Level.INFO, "Created organization: " + owner);
+		log.log(Level.INFO, DateTime.now() + "    Created organization: " + owner);
 		return id;
 	}
 
@@ -143,7 +144,7 @@ public class DAO  {
 	public void deleteOwner(int idOwner) {
 		Object [] values = new Object[]{idOwner};
 		jdbcTemplate.update(sqlQueries.deleteOwner(), values);
-		log.log(Level.INFO, "Deleted organization with id = " + idOwner);
+		log.log(Level.INFO, DateTime.now() + "    Deleted organization with id = " + idOwner);
 	}
 
 	/**
@@ -154,7 +155,7 @@ public class DAO  {
 		Object [] values = new Object[]{owner.getName(), owner.getInn(), owner.getAddress(), owner.getId()};
 		String sqlQuery = sqlQueries.editOwner();
 		jdbcTemplate.update(sqlQuery, values);
-		log.log(Level.INFO, "Edited organization: " + owner);
+		log.log(Level.INFO, DateTime.now() + "    Edited organization: " + owner);
 	}
 
 	/**
@@ -166,7 +167,7 @@ public class DAO  {
 		Object [] values = new Object[]{id};
 		List<Organization> resultSet = jdbcTemplate.query(sqlQueries.reviewOwner(), values, organizationRowMapper);
 		Owner owner = resultSet.get(0);
-		log.log(Level.INFO, "Reviwed organization: " + owner);
+		log.log(Level.INFO, DateTime.now() + "    Reviwed organization: " + owner);
 		return  owner;
 	}
 	
@@ -207,7 +208,7 @@ public class DAO  {
 		//—формировать событие добавлени€ пол€
 		addPassportEvent(passport, owner, ADD_EVENT);
 		
-		log.log(Level.INFO, "Created passport: " + passport);
+		log.log(Level.INFO, DateTime.now() + "    Created passport: " + passport);
 		
 		return id;
 	}
@@ -227,7 +228,7 @@ public class DAO  {
 		//—формировать событие удалени€ пол€
 		addPassportEvent(passport, owner, DELETE_EVENT);
 		
-		log.log(Level.INFO, "Deleted passport: " + passport);
+		log.log(Level.INFO, DateTime.now() + "    Deleted passport: " + passport);
 	}
 	
 	/**
@@ -260,7 +261,7 @@ public class DAO  {
 		//—формировать событие редактировани€ пол€
 		addPassportEvent(passport, owner, EDIT_EVENT);
 		
-		log.log(Level.INFO, "Edited passport: " + passport);
+		log.log(Level.INFO, DateTime.now() + "    Edited passport: " + passport);
 	}
 
 	/**
@@ -276,7 +277,7 @@ public class DAO  {
 		//—формировать событие просмотра пол€
 		addPassportEvent(passport, browsing, REVIEW_EVENT);
 		
-		log.log(Level.INFO, "Reviwed passport: " + passport);
+		log.log(Level.INFO, DateTime.now() + "    Reviwed passport: " + passport);
 		
 		return passport;
 	}
@@ -294,7 +295,7 @@ public class DAO  {
 			passport.setOwner(owner);
 		}
 		
-		log.log(Level.INFO, "Executed requare for finding passports");
+		log.log(Level.INFO, DateTime.now() + "    Executed requare for finding passports");
 		
 		return resaltList;
 	}
@@ -317,7 +318,7 @@ public class DAO  {
 		Object[] values = new Object[] {event.getIdPassport(), event.getIdAuthor(), message, event.getType()};
 		String sqlQuery = sqlQueries.createPassportEvent();
 		jdbcTemplate.update(sqlQuery, values);
-		log.log(Level.INFO, "Added event ("+ typeEvent +") about passport: " + passport);
+		log.log(Level.INFO, DateTime.now() + "    Added event ("+ typeEvent +") about passport: " + passport);
 	}
 	
 	/**
@@ -326,7 +327,7 @@ public class DAO  {
 	 */
 	public void deletePassportEvent(int idEvent){
 		jdbcTemplate.update(sqlQueries.deletePassportEvent(), new Object[]{idEvent});
-		log.log(Level.INFO, "Event with id="+idEvent+" deleted from data base!");
+		log.log(Level.INFO, DateTime.now() + "    Event with id="+idEvent+" deleted from data base!");
 	}
 
 	/**
@@ -355,7 +356,7 @@ public class DAO  {
 		user.setOrganizationId(organizationId);
 		int userId = createUser(user);
 		user.setId(userId);
-		log.log(Level.INFO, "Registration user: "+user+ " was execute successful!");
+		log.log(Level.INFO, DateTime.now() + "    Registration user: "+user+ " was execute successful!");
 		return user;
 	}
 	
@@ -370,7 +371,7 @@ public class DAO  {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		jdbcTemplate.update(psc, keyHolder);
 		int userId = keyHolder.getKey().intValue();
-		log.log(Level.INFO, "User: "+user+" was created successfuk in data base!");
+		log.log(Level.INFO, DateTime.now() + "    User: "+user+" was created successfuk in data base!");
 		return userId;
 		
 	}
@@ -384,10 +385,10 @@ public class DAO  {
 		Object[] values = new Object[] {login};
 		List<User> resultSet = jdbcTemplate.query(sqlQueries.reviewUserByLogin(), values , userRowMapper);
 		if(resultSet.isEmpty()){
-			log.log(Level.INFO, "Executed finding user by login='"+login+"', but he wasn't find!");
+			log.log(Level.INFO, DateTime.now() + "    Executed finding user by login='"+login+"', but he wasn't find!");
 			return null;
 		}else{
-			log.log(Level.INFO, "Executed finding user by login='"+login+"' and he was find!");
+			log.log(Level.INFO, DateTime.now() + "    Executed finding user by login='"+login+"' and he was find!");
 		}
 		return resultSet.get(0);
 	}

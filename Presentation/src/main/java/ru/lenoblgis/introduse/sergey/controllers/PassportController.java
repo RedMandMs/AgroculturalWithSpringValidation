@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.support.ResourceBundleMessageSource;
@@ -33,6 +36,11 @@ import ru.lenoblgis.introduse.sergey.services.PassportService;
 @RequestMapping(value = "/passport")
 public class PassportController {
 
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(PassportController.class);
+	
 	/**
 	 * Валидатор для проверки коректности паспорта при создании и редактировании
 	 */
@@ -144,6 +152,8 @@ public class PassportController {
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
     public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) throws UnsupportedEncodingException {
 		
+		log.log(Level.INFO, DateTime.now() + "	User trying chenge passport(" + changedPassport + ")");
+		
 		HttpSession session = getSession();
 		
 		//Преобразование русского текста в комментарии к паспорту
@@ -154,7 +164,7 @@ public class PassportController {
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
 		if( ! erorList.isEmpty()){
-			
+			log.log(Level.INFO, DateTime.now() + "	User can not change the information on the passport("+changedPassport+"), becouse to errors in filling fields");
 			erorMessageList = getListMessageForEror(erorList);
 			session.setAttribute("incorrectPassport", changedPassport);
 			session.setAttribute("erorMessagesEditPassport", erorMessageList);
@@ -213,6 +223,8 @@ public class PassportController {
 	@RequestMapping(value = "/createPassport", method = RequestMethod.POST)
     public String createPassport(@Valid PassportInfo createdPassport, BindingResult result) throws UnsupportedEncodingException {
 		
+		log.log(Level.INFO, DateTime.now() + "	User trying create passport(" + createdPassport + ")");
+		
 		HttpSession session = getSession();
 		
 		//Преобразование русского текста в комментарии к паспорту
@@ -223,6 +235,7 @@ public class PassportController {
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
 		if( ! erorList.isEmpty()){
+			log.log(Level.INFO, DateTime.now() + "	User can not create the passport("+createdPassport+"), becouse to errors in filling fields");
 			erorMessageList = getListMessageForEror(erorList);
 			session.setAttribute("incorrectCreatePassport", createdPassport);
 			session.setAttribute("messagesCreateEror", erorMessageList);
@@ -312,21 +325,25 @@ public class PassportController {
 		
 		Integer idPassport = Integer.valueOf(request.getParameter("idPassport"));
 		
-		passportService.deletePassport(idPassport);
+		log.log(Level.INFO, DateTime.now() + "	User trying delete passport(id="+ idPassport +")");
 		
-		HttpSession session = getSession();
-		
-		List<Integer> myIdPasports = (List<Integer>) session.getAttribute("myIdPasports");
-		myIdPasports.remove(idPassport);
-		List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
-		for(PassportInfo passportInfo : myPassportList){
-			if(passportInfo.getId().equals(idPassport)){
-				myPassportList.remove(passportInfo);
-				break;
+		if(passportService.deletePassport(idPassport)){
+			
+			HttpSession session = getSession();
+			
+			List<Integer> myIdPasports = (List<Integer>) session.getAttribute("myIdPasports");
+			myIdPasports.remove(idPassport);
+			List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
+			for(PassportInfo passportInfo : myPassportList){
+				if(passportInfo.getId().equals(idPassport)){
+					myPassportList.remove(passportInfo);
+					break;
+				}
 			}
+			String lastList = (String) session.getAttribute("lastList");
+			return "redirect:/passport/"+ lastList;
 		}
-		String lastList = (String) session.getAttribute("lastList");
-		return "redirect:/passport/"+ lastList;
+		return "redirect:/passport/mylistpassports";
 	}
 	
 	/**

@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +18,12 @@ import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 @Component("organizationService")
 public class OwnerService implements Serializable{
 	
+	
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(OwnerService.class);
+	 
 	/**
 	 * DAO для работы с базой данных
 	 */
@@ -48,7 +57,7 @@ public class OwnerService implements Serializable{
 			return organizationInfo;
 		}
 		catch (IndexOutOfBoundsException ex) {
-			//TODO:
+			log.log(Level.ERROR, DateTime.now() + "		Organization(id="+ownerId+") was not been reviwed, because it wasn't found");
 		}
 		return null;
 	}
@@ -64,6 +73,7 @@ public class OwnerService implements Serializable{
 			return true;
 		}
 		catch (IndexOutOfBoundsException ex) {
+			log.log(Level.ERROR, DateTime.now() + "		Organization(id="+ownerId+") was not been deleted, because organization with id like this wasn't found");
 			return false;
 		}
 	}

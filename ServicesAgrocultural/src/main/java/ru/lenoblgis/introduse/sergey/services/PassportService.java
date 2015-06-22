@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
@@ -18,7 +21,10 @@ import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
 @Component("passportService")
 public class PassportService implements Serializable {
 	
-	
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(PassportService.class);
 	
 	/**
 	 * Конструктор по-умолчанию
@@ -46,10 +52,10 @@ public class PassportService implements Serializable {
 			passportInfo.setId(id);
 			return passportInfo;
 		}catch(DuplicateKeyException duplicateEx){
-			System.out.println("Дублирование!!!");
-				return passportInfo;
+			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been created, because they were duplicated unique fields");
+			return passportInfo;
 		}catch(DataIntegrityViolationException ex){
-			System.out.println("Внешний ключ!!!");
+			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been created, because of a conflict foreign key");
 			return passportInfo;
 		}
 	}
@@ -67,10 +73,10 @@ public class PassportService implements Serializable {
 			dao.editPassport(passport);;
 			return true;
 		}catch(DuplicateKeyException duplicateEx){
-			System.out.println("Дублирование!!!");
+			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been edited, because they were duplicated unique fields");
 			return false;
 		}catch(DataIntegrityViolationException ex){
-			System.out.println("Внешний ключ!!!");
+			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been edited, because of a conflict foreign key");
 			return false;
 		}
 	}
@@ -89,8 +95,7 @@ public class PassportService implements Serializable {
 			Passport passport = dao.reviewPassport(passportId, browsing);
 			passportInfo = converDomainToDTO(passport);
 		}catch(IndexOutOfBoundsException duplicateEx){
-			//TODO:
-			System.out.println("Не существует такого паспорта!!!");
+			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been reviwed, because it wasn't found");
 		}
 		return passportInfo;
 	}
@@ -106,6 +111,7 @@ public class PassportService implements Serializable {
 			dao.deletePassport(passportId);
 			return true;
 		}catch(IndexOutOfBoundsException duplicateEx){
+			log.log(Level.ERROR, DateTime.now() + "		Passport(id="+passportId+") was not been deleted, because passport with id like this wasn't found");
 			return false;
 		}
 	}
