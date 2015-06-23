@@ -43,7 +43,7 @@
 					
 				<tr>
 					<td>Тип поля: </td>
-					<td>${types[0].getTypeOf(reviewingPassport.getType()).getView()}</td>
+					<td>${types[0].getTypeOf(reviewingPassport.getType()).getType()}</td>
 				</tr>
 				
 				<tr>

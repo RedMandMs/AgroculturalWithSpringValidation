@@ -60,7 +60,7 @@
 							<td align="center">
 								<sf:select path="type" id="type">
 									<c:forEach var="type" items="${types}">
-										<sf:option value="${type.getType()}">${type.getView()}</sf:option>
+										<sf:option value="${type.getType()}"/>
 									</c:forEach>
 								</sf:select>
 							</td>
@@ -95,7 +95,7 @@
 				    <td align="center">${regions[0].getRegion(passport.getRegion()).getView()}</td>
 				    <td align="center">${passport.getCadastrNumber()}</td>
 				    <td align="center">${passport.getArea()}</td>
-				    <td align="center">${types[0].getTypeOf(passport.getType()).getView()}</td>
+				    <td align="center">${types[0].getTypeOf(passport.getType().getType())}</td>
 				    <td align="center">${passport.getComment()}</td>
 				  	<td align="center">
 				    	<form action="http://localhost:8080/Presentation/passport/${passport.getId()}" method="get">

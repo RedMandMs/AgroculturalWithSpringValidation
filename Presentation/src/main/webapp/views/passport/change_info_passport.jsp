@@ -68,7 +68,7 @@
 							<td>
 								<sf:select path="type" id="type">
 									<c:forEach var="type" items="${types}">
-										<sf:option value="${type.getType()}">${type.getView()}</sf:option>
+										<sf:option value="${type.getType()}"/>
 									</c:forEach>
 								</sf:select>
 							</td>

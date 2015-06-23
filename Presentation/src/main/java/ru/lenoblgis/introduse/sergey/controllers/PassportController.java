@@ -156,9 +156,8 @@ public class PassportController {
 		
 		HttpSession session = getSession();
 		
-		//ѕреобразование русского текста в комментарии к паспорту
-		String comment = new String (changedPassport.getComment().getBytes ("ISO-8859-1"),"Cp1251");
-		changedPassport.setComment(comment);
+		//ѕреобразование русского текста
+		changedPassport = encodeAllPassportFields(changedPassport);
 		
 		//ѕолучаем сообщени€ об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
@@ -184,7 +183,7 @@ public class PassportController {
 		
 		return "redirect:/passport/"+changedPassport.getId();
 	}
-	
+
 	/**
 	 * ќтобразить форму дл€ создани€ нового паспорта
 	 * @param model - список дл€ отображени€ данных на странице
@@ -227,9 +226,8 @@ public class PassportController {
 		
 		HttpSession session = getSession();
 		
-		//ѕреобразование русского текста в комментарии к паспорту
-		String comment = new String (createdPassport.getComment().getBytes ("ISO-8859-1"),"Cp1251");
-		createdPassport.setComment(comment);
+		//ѕреобразование русского текста
+		createdPassport = encodeAllPassportFields(createdPassport);
 		
 		//ѕолучаем сообщени€ об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
@@ -378,5 +376,35 @@ public class PassportController {
 		}
 		
 		return messages;
+	}
+	
+	/**
+	 * ƒекодировать все пол€ паспорта (на случай русских символов)
+	 * @param passport - оригенальный паспорт
+	 * @return - паспорт с преобразованными (декодированными) пол€ми
+	 */
+	private PassportInfo encodeAllPassportFields(PassportInfo passport){
+		if(passport.getNameOwner() != null){
+			passport.setNameOwner(encodeToCp1251(passport.getNameOwner()));
+		}
+		passport.setComment(encodeToCp1251(passport.getComment()));
+		passport.setRegion(encodeToCp1251(passport.getRegion()));
+		passport.setType(encodeToCp1251(passport.getType()));
+		return passport;
+	}
+	
+	/**
+	 * ѕерекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (дл€ руских символов)
+	 * @param origin - оригенальна€ строка
+	 * @return - преобразованна€ строка
+	 */
+	private String encodeToCp1251(String origin) {
+		String converted = null;
+		try {
+			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+		}
+		return converted;
 	}
 }

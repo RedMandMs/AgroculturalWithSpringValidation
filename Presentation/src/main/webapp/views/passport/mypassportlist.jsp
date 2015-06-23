@@ -52,7 +52,7 @@
 				    <td align="center">${regions[0].getRegion(passport.getRegion()).getView()}</td>
 				    <td align="center">${passport.getCadastrNumber()}</td>
 				    <td align="center">${passport.getArea()}</td>
-				    <td align="center">${types[0].getTypeOf(passport.getType()).getView()}</td>
+				    <td align="center">${types[0].getTypeOf(passport.getType()).getType()}</td>
 				    <td align="center">${passport.getComment()}</td>
 				    <td align="center">
 				    	<form action="/Presentation/passport/${passport.getId()}" method="get">
