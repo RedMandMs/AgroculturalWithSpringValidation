@@ -106,20 +106,21 @@ public class RegistrationController {
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
-		if( ! erorList.isEmpty()){
-			erorMessageList = CompanyController.getListMessageForEror(erorList);
-			session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
-			session.setAttribute("listErorRegistration", erorMessageList);
-			return "redirect:/registration";
-		}
-		
-		OrganizationInfo regestratingCompany = userService.registration(registrationInfo);
-		
-		if(regestratingCompany.getId() != null){
+		try{
+			if( ! erorList.isEmpty()){
+				erorMessageList = CompanyController.getListMessageForEror(erorList);
+				session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
+				session.setAttribute("listErorRegistration", erorMessageList);
+				return "redirect:/registration";
+			}
+			
+			OrganizationInfo regestratingCompany = userService.registration(registrationInfo);
+			
+			
 			session.removeAttribute("uncorrectRegistrationUserCompany");
 			session.removeAttribute("listErorRegistration");
 			return "redirect:/login";
-		}else{
+		}catch (Exception e) {
 			erorMessageList.add("Системная ошибка!");
 			session.setAttribute("listErorRegistration", erorMessageList);
 			session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);

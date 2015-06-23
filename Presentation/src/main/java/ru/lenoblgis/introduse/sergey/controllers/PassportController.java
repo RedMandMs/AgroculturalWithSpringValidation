@@ -151,35 +151,38 @@ public class PassportController {
 	 */
 	@RequestMapping(value = "change_passport_info/{passportId}", method = RequestMethod.POST)
     public String editPassport(@Valid PassportInfo changedPassport, BindingResult result) throws UnsupportedEncodingException {
-		
-		log.log(Level.INFO, DateTime.now() + "	User trying chenge passport(" + changedPassport + ")");
-		
-		HttpSession session = getSession();
-		
-		//Преобразование русского текста
-		changedPassport = encodeAllPassportFields(changedPassport);
-		
-		//Получаем сообщения об ошибках, если они есть
-		List<ObjectError> erorList = result.getAllErrors();
-		List<String> erorMessageList = new ArrayList<>();
-		if( ! erorList.isEmpty()){
-			log.log(Level.INFO, DateTime.now() + "	User can not change the information on the passport("+changedPassport+"), becouse to errors in filling fields");
-			erorMessageList = getListMessageForEror(erorList);
-			session.setAttribute("incorrectPassport", changedPassport);
-			session.setAttribute("erorMessagesEditPassport", erorMessageList);
-			return "redirect:/passport/change_passport_info/"+changedPassport.getId();
-		}
-		
-		//Если паспорт изменён, то изменяем список своих паспортов
-		if(passportService.editPassport(changedPassport)){
-			List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
-			for(int i = 0; i < myPassportList.size(); i++){
-				if((myPassportList.get(i).equals(changedPassport))){
-					myPassportList.remove(myPassportList.get(i));
-					myPassportList.add(changedPassport);
-				}
+			log.log(Level.INFO, DateTime.now() + "	User trying chenge passport(" + changedPassport + ")");
+			
+			HttpSession session = getSession();
+			
+			//Преобразование русского текста
+			changedPassport = encodeAllPassportFields(changedPassport);
+			
+			//Получаем сообщения об ошибках, если они есть
+			List<ObjectError> erorList = result.getAllErrors();
+			List<String> erorMessageList = new ArrayList<>();
+			
+		try{
+			
+			if( ! erorList.isEmpty()){
+				log.log(Level.INFO, DateTime.now() + "	User can not change the information on the passport("+changedPassport+"), becouse to errors in filling fields");
+				erorMessageList = getListMessageForEror(erorList);
+				session.setAttribute("incorrectPassport", changedPassport);
+				session.setAttribute("erorMessagesEditPassport", erorMessageList);
+				return "redirect:/passport/change_passport_info/"+changedPassport.getId();
 			}
-		}else{
+		
+			//Если паспорт изменён, то изменяем список своих паспортов
+			passportService.editPassport(changedPassport);
+				List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
+				for(int i = 0; i < myPassportList.size(); i++){
+					if((myPassportList.get(i).equals(changedPassport))){
+						myPassportList.remove(myPassportList.get(i));
+						myPassportList.add(changedPassport);
+					}
+				}
+		}catch (Exception e) {
+			log.log(Level.ERROR, "System eror when a user try to edit passport("+changedPassport+"). Exeption: "+ e);
 			session.setAttribute("incorrectPassport", changedPassport);
 			erorMessageList.add("Системная ошибка!");
 			session.setAttribute("erorMessagesEditPassport", erorMessageList);
@@ -236,28 +239,29 @@ public class PassportController {
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
-		if( ! erorList.isEmpty()){
-			log.log(Level.INFO, DateTime.now() + "	User can not create the passport("+createdPassport+"), becouse to errors in filling fields");
-			erorMessageList = getListMessageForEror(erorList);
-			session.setAttribute("incorrectCreatePassport", createdPassport);
-			session.setAttribute("messagesCreateEror", erorMessageList);
-			return "redirect:/passport/createPassport";
-		}
-		
-		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
-		
-		createdPassport.setIdOwner(myCompany.getId());
-		createdPassport.setNameOwner(myCompany.getName());
-		
-		createdPassport = passportService.createPassport(createdPassport);
-		if(createdPassport.getId() != null && createdPassport.getId() != 0){
+		try{
+			if( ! erorList.isEmpty()){
+				log.log(Level.INFO, DateTime.now() + "	User can not create the passport("+createdPassport+"), becouse to errors in filling fields");
+				erorMessageList = getListMessageForEror(erorList);
+				session.setAttribute("incorrectCreatePassport", createdPassport);
+				session.setAttribute("messagesCreateEror", erorMessageList);
+				return "redirect:/passport/createPassport";
+			}
+			
+			OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
+			
+			createdPassport.setIdOwner(myCompany.getId());
+			createdPassport.setNameOwner(myCompany.getName());
+			
+			createdPassport = passportService.createPassport(createdPassport);
 			List<Integer> myIdPasports = (List<Integer>) session.getAttribute("myIdPasports");
 			myIdPasports.add(createdPassport.getId());
 			List<PassportInfo> myPassportList = (List<PassportInfo>) session.getAttribute("myPassportsList");
 			myPassportList.add(createdPassport);
 			session.setAttribute("lastList", "mylistpassports");
 			return "redirect:/passport/"+createdPassport.getId();
-		}else{
+		}catch (Exception e) {
+			log.log(Level.ERROR, "System eror when a user try to create passport("+createdPassport+"). Exeption: "+ e);
 			session.setAttribute("incorrectCreatePassport", createdPassport);
 			erorMessageList.add("Системная ошибка!");
 			session.setAttribute("messagesCreateEror", erorMessageList);
@@ -388,8 +392,9 @@ public class PassportController {
 	 * Декодировать все поля паспорта (на случай русских символов)
 	 * @param passport - оригенальный паспорт
 	 * @return - паспорт с преобразованными (декодированными) полями
+	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
 	 */
-	private PassportInfo encodeAllPassportFields(PassportInfo passport){
+	private PassportInfo encodeAllPassportFields(PassportInfo passport) throws UnsupportedEncodingException{
 		if(passport.getNameOwner() != null){
 			passport.setNameOwner(encodeToCp1251(passport.getNameOwner()));
 		}
@@ -403,13 +408,15 @@ public class PassportController {
 	 * Перекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (для руских символов)
 	 * @param origin - оригенальная строка
 	 * @return - преобразованная строка
+	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
 	 */
-	private String encodeToCp1251(String origin) {
+	private String encodeToCp1251(String origin) throws UnsupportedEncodingException{
 		String converted = null;
 		try {
 			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
 		} catch (UnsupportedEncodingException e) {
 			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+			throw e;
 		}
 		return converted;
 	}

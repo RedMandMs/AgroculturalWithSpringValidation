@@ -53,10 +53,10 @@ public class PassportService implements Serializable {
 			return passportInfo;
 		}catch(DuplicateKeyException duplicateEx){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been created, because they were duplicated unique fields. Exeption: " + duplicateEx);
-			return passportInfo;
+			throw duplicateEx;
 		}catch(DataIntegrityViolationException ex){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been created, because of a conflict foreign key. Exeption: " + ex);
-			return passportInfo;
+			throw ex;
 		}
 	}
 	
@@ -74,10 +74,10 @@ public class PassportService implements Serializable {
 			return true;
 		}catch(DuplicateKeyException duplicateEx){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been edited, because they were duplicated unique fields. Exeption: " + duplicateEx);
-			return false;
+			throw duplicateEx;
 		}catch(DataIntegrityViolationException ex){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been edited, because of a conflict foreign key. Exeption: " + ex);
-			return false;
+			throw ex;
 		}
 	}
 	
@@ -96,6 +96,7 @@ public class PassportService implements Serializable {
 			passportInfo = converDomainToDTO(passport);
 		}catch(IndexOutOfBoundsException indexOutOfBoundEx){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(" + passportInfo + ") was not been reviwed, because it wasn't found. Exeption: " + indexOutOfBoundEx);
+			throw indexOutOfBoundEx;
 		}
 		return passportInfo;
 	}
@@ -112,7 +113,7 @@ public class PassportService implements Serializable {
 			return true;
 		}catch(IndexOutOfBoundsException indexOutOfBoundEx){
 			log.log(Level.ERROR, DateTime.now() + "		Passport(id="+passportId+") was not been deleted, because passport with id like this wasn't found. Exeption: " + indexOutOfBoundEx);
-			return false;
+			throw indexOutOfBoundEx;
 		}
 	}
 	

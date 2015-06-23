@@ -58,8 +58,8 @@ public class OwnerService implements Serializable{
 		}
 		catch (IndexOutOfBoundsException ex) {
 			log.log(Level.ERROR, DateTime.now() + "		Organization(id="+ownerId+") was not been reviwed, because it wasn't found. Exeption: " + ex);
+			throw ex;
 		}
-		return null;
 	}
 	
 	/**
@@ -74,7 +74,7 @@ public class OwnerService implements Serializable{
 		}
 		catch (IndexOutOfBoundsException ex) {
 			log.log(Level.ERROR, DateTime.now() + "		Organization(id="+ownerId+") was not been deleted, because organization with id like this wasn't found. Exeption: " + ex);
-			return false;
+			throw ex;
 		}
 	}
 	

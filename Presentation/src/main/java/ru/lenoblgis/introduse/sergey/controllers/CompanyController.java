@@ -171,21 +171,24 @@ public class CompanyController {
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
 		List<String> erorMessageList = new ArrayList<>();
-		if( ! erorList.isEmpty()){
-			log.log(Level.INFO, DateTime.now() + "	User can not change the information about organization("+organizationInfo+"), becouse to errors in filling fields");
-			erorMessageList = getListMessageForEror(erorList);
-			session.setAttribute("incorrectCompany", organizationInfo);
-			session.setAttribute("editOrganizationErors", erorMessageList);
-			return "redirect:/organization/company/change_organization_info";
-		}
-
-		OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
-		
-		organizationInfo.setId(myCompany.getId());
-		if(ownerService.editOwner(organizationInfo)){
+		try{
+			if( ! erorList.isEmpty()){
+				log.log(Level.INFO, DateTime.now() + "	User can not change the information about organization("+organizationInfo+"), becouse to errors in filling fields");
+				erorMessageList = getListMessageForEror(erorList);
+				session.setAttribute("incorrectCompany", organizationInfo);
+				session.setAttribute("editOrganizationErors", erorMessageList);
+				return "redirect:/organization/company/change_organization_info";
+			}
+	
+			OrganizationInfo myCompany = (OrganizationInfo) session.getAttribute("myCompany");
+			organizationInfo.setId(myCompany.getId());
+			
+			//Отправка компании на редактирование сервису
+			ownerService.editOwner(organizationInfo);
 			setMyCompany(session, myCompany.getId());
 			return "redirect:/organization/company/mycompany";
-		}else{
+			
+		}catch (Exception e) {
 			session.setAttribute("incorrectCompany", organizationInfo);
 			erorMessageList.add("Системная ошибка!");
 			session.setAttribute("editOrganizationErors", erorMessageList);
