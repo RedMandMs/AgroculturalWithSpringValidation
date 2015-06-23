@@ -179,8 +179,12 @@ public class PassportController {
 					myPassportList.add(changedPassport);
 				}
 			}
+		}else{
+			session.setAttribute("incorrectPassport", changedPassport);
+			erorMessageList.add("Системная ошибка!");
+			session.setAttribute("erorMessagesEditPassport", erorMessageList);
+			return "redirect:/passport/change_passport_info/"+changedPassport.getId();
 		}
-		
 		return "redirect:/passport/"+changedPassport.getId();
 	}
 
@@ -255,6 +259,8 @@ public class PassportController {
 			return "redirect:/passport/"+createdPassport.getId();
 		}else{
 			session.setAttribute("incorrectCreatePassport", createdPassport);
+			erorMessageList.add("Системная ошибка!");
+			session.setAttribute("messagesCreateEror", erorMessageList);
 			return "redirect:/passport/createPassport";
 		}
 	}

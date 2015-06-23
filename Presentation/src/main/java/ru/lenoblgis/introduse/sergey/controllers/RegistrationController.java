@@ -119,9 +119,12 @@ public class RegistrationController {
 			session.removeAttribute("uncorrectRegistrationUserCompany");
 			session.removeAttribute("listErorRegistration");
 			return "redirect:/login";
+		}else{
+			erorMessageList.add("Системная ошибка!");
+			session.setAttribute("listErorRegistration", erorMessageList);
+			session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
+			return "redirect:/registration";
 		}
-		session.setAttribute("uncorrectRegistrationUserCompany", registrationInfo);
-		return "redirect:/registration";
 	}
 	
 	

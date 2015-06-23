@@ -186,6 +186,9 @@ public class CompanyController {
 			setMyCompany(session, myCompany.getId());
 			return "redirect:/organization/company/mycompany";
 		}else{
+			session.setAttribute("incorrectCompany", organizationInfo);
+			erorMessageList.add("Системная ошибка!");
+			session.setAttribute("editOrganizationErors", erorMessageList);
 			return "redirect:/organization/company/change_organization_info";
 		}
 	}
