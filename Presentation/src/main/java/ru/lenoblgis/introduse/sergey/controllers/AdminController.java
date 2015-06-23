@@ -140,6 +140,7 @@ public class AdminController {
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpSession session = attr.getRequest().getSession(true); // true == allow create
 		
+		@SuppressWarnings("unchecked")
 		List<EventInfo> findingEvents = (List<EventInfo>) session.getAttribute("findingEvents");
 		
 		for (int i = 0; i < findingEvents.size(); i++) {

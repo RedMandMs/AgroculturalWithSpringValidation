@@ -120,6 +120,7 @@ public class RegistrationController {
 			session.removeAttribute("uncorrectRegistrationUserCompany");
 			session.removeAttribute("listErorRegistration");
 			return "redirect:/login";
+			
 		}catch (Exception e) {
 			erorMessageList.add("Системная ошибка!");
 			session.setAttribute("listErorRegistration", erorMessageList);

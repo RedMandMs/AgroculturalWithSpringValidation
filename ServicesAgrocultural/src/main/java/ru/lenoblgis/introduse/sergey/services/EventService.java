@@ -14,7 +14,7 @@ import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 
 @Service("eventService")
 public class EventService implements Serializable{
-
+	
 	/**
 	 * DAO для работы с базой данных
 	 */
@@ -116,4 +116,9 @@ public class EventService implements Serializable{
 	public void deleteEvent(Integer idEvent) {
 		dao.deletePassportEvent(idEvent);
 	}
+	
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = -7362792691829662617L;
 }

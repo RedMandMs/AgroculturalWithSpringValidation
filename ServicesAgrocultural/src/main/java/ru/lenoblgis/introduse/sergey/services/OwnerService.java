@@ -17,12 +17,6 @@ import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 
 @Component("organizationService")
 public class OwnerService implements Serializable{
-	
-	
-	/**
-	 * Логер
-	 */
-	 private static final Logger log = Logger.getLogger(OwnerService.class);
 	 
 	/**
 	 * DAO для работы с базой данных
@@ -114,4 +108,14 @@ public class OwnerService implements Serializable{
 	public static OrganizationInfo convertDomainToDTO(Owner organization){
 		return new OrganizationInfo(organization.getId(), organization.getName(), organization.getInn(), organization.getAddress());
 	}
+	
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = 3916222068090518352L;
+	
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(OwnerService.class);
 }

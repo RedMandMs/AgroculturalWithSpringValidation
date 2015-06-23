@@ -1,10 +1,11 @@
 package ru.lenoblgis.introduse.sergey.datatransferobject.passportinfo;
 
+import java.io.Serializable;
 
 
-public class PassportInfo{
 
-	
+public class PassportInfo implements Serializable{
+
 	/**
 	 * Конструктор для отображения паспорта из БД
 	 * @param id - id пасспорта
@@ -15,8 +16,8 @@ public class PassportInfo{
 	 * @param type - тип поля
 	 * @param comment - комментарий
 	 */
-	public PassportInfo(int id, int idOwner, String region, String nameOwner,
-			Integer cadastrNumber, float area, String type, String comment) {
+	public PassportInfo(Integer id, Integer idOwner, String region, String nameOwner,
+			Integer cadastrNumber, Float area, String type, String comment) {
 		this.id = id;
 		this.idOwner = idOwner;
 		this.nameOwner = nameOwner;
@@ -36,8 +37,8 @@ public class PassportInfo{
 	 * @param type - тип поля
 	 * @param comment - комментарий
 	 */
-	public PassportInfo(int idOwner, String region, Integer cadastrNumber,
-			float area, String type, String comment) {
+	public PassportInfo(Integer idOwner, String region, Integer cadastrNumber,
+			Float area, String type, String comment) {
 		this.idOwner = idOwner;
 		this.region = region;
 		this.cadastrNumber = cadastrNumber;
@@ -237,4 +238,9 @@ public class PassportInfo{
 		sb.append('}');
 		return sb.toString();
 	}
+	
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = -4921367394725875473L;
 }

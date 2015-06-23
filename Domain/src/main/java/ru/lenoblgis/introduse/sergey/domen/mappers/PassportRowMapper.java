@@ -16,6 +16,11 @@ import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
 public class PassportRowMapper implements RowMapper<Passport>, Serializable {
 
 	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = 9202383766579652978L;
+
+	/**
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
 	 */
 	public Passport mapRow(ResultSet rs, int rowNum) throws SQLException {		

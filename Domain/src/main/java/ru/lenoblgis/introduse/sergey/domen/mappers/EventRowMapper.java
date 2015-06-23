@@ -16,6 +16,11 @@ import ru.lenoblgis.introduse.sergey.domen.actionevent.PassportEvent;
  */
 public class EventRowMapper implements RowMapper<PassportEvent>, Serializable{
 
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = -4181029075454986161L;
+
 	/*
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
 	 */

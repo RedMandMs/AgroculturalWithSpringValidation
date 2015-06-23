@@ -1,7 +1,10 @@
 package ru.lenoblgis.introduse.sergey.validation;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -10,6 +13,7 @@ import org.springframework.validation.Validator;
 import ru.lenoblgis.introduse.sergey.data.dao.DAO;
 import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.OrganizationInfo;
 import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
+import ru.lenoblgis.introduse.sergey.services.OwnerService;
 
 /**
  * Кдасс для проверки вводимых данных при изменении данных о компании
@@ -18,6 +22,11 @@ import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
  */
 public class OrganizationValidator implements Validator {
 
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(OwnerService.class);
+	
 	@Autowired
 	private DAO dao;
 	
@@ -42,10 +51,16 @@ public class OrganizationValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		OrganizationInfo organization = (OrganizationInfo) target;
 		
+		//Т.к. имя должно быть уникальным, оно проверяется, но т.к. оно считанно с формы, то его нужно декодировать, на случай, если введены русские символы
+		try {
+			organization.setName(new String(organization.getName().getBytes("ISO-8859-1"), "Cp1251"));
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode name company. Exeption: " + e);
+		}
+		
 		//-------------Проверка не было ли поле названия оставлено пустым
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "name.empty", "Необходимо ввести названние организации!");
-		
-		
+			
 		//-------------Проверка количества символов в названии организации
 		if(organization.getName().trim().length() < 3 || organization.getName().trim().length() > 20){
 			errors.rejectValue("name", "name.wrongFormat", "Название организации должно содержать от 3 до 20 символов!");

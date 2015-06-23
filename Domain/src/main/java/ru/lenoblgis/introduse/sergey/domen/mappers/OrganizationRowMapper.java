@@ -15,6 +15,11 @@ import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
 public class OrganizationRowMapper implements RowMapper<Organization>, Serializable {
 
 	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = -6194692520477775692L;
+
+	/**
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
 	 */
 	public Organization mapRow(ResultSet rs, int rowNum) throws SQLException {

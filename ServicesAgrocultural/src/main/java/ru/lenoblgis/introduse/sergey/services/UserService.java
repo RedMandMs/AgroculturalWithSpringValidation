@@ -16,8 +16,7 @@ import ru.lenoblgis.introduse.sergey.domen.user.UserRole;
 
 @Service
 public class UserService implements Serializable{
-	
-	
+
 	/**
 	 *  онстрктор по-умолчанию
 	 */
@@ -85,4 +84,8 @@ public class UserService implements Serializable{
 		return myOwnerInfo;
 	}
 
+	/**
+	 * UID дл€ сериализации
+	 */
+	private static final long serialVersionUID = -4563959505303068679L;
 }

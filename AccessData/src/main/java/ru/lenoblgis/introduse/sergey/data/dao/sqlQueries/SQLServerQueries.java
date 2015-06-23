@@ -7,7 +7,7 @@ import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
 import ru.lenoblgis.introduse.sergey.domen.user.User;
 
 public class SQLServerQueries implements SQLQueries {
-
+	
 	/**
 	 * Ќазвание таблицы с организаци€ми
 	 */
@@ -230,6 +230,8 @@ public class SQLServerQueries implements SQLQueries {
 		return query + " ORDER BY id DESC;";
 	}
 	
-	
-	
+	/**
+	 * UID дл€ сериализации
+	 */
+	private static final long serialVersionUID = 5540377747976279790L;
 }

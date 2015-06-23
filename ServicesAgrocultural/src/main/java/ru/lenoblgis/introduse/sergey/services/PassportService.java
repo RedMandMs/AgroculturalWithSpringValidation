@@ -141,4 +141,9 @@ public class PassportService implements Serializable {
 	private static PassportInfo converDomainToDTO(Passport passport){
 		return new PassportInfo(passport.getId(), passport.getIdOwner(), passport.getRegion(), passport.getOwner().getName(), passport.getCadastrNumber(), passport.getArea(), passport.getType(), passport.getComment());
 	}
+	
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = -8295916090862287108L;
 }

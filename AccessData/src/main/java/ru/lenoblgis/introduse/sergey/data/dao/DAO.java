@@ -1,5 +1,6 @@
 package ru.lenoblgis.introduse.sergey.data.dao;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -35,8 +36,8 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
  *
  */
 @Component("dao")
-public class DAO  {
-	
+public class DAO implements Serializable {
+
 	/**
 	 * Логер
 	 */
@@ -415,4 +416,9 @@ public class DAO  {
 		}
 		 
 	}
+	
+	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = 5453332340428759258L;
 }

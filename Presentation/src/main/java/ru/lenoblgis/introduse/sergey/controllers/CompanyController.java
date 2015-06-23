@@ -279,7 +279,6 @@ public class CompanyController {
 	 * @return - организация с преобразованными (декодированными) полями
 	 */
 	private OrganizationInfo encodeOrganization(OrganizationInfo organizationInfo) {
-		organizationInfo.setName(encodeToCp1251(organizationInfo.getName()));
 		organizationInfo.setAddress(encodeToCp1251(organizationInfo.getAddress()));
 		return organizationInfo;
 	}

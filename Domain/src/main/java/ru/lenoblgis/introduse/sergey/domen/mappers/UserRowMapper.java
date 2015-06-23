@@ -17,6 +17,11 @@ import ru.lenoblgis.introduse.sergey.domen.user.UserRole;
 public class UserRowMapper implements RowMapper<User>, Serializable{
 
 	/**
+	 * UID для сериализации
+	 */
+	private static final long serialVersionUID = 2330524216738978403L;
+
+	/**
 	 * @see org.springframework.jdbc.core.RowMapper#mapRow(java.sql.ResultSet, int)
 	 */
 	@Override
