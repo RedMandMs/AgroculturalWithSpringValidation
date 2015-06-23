@@ -51,7 +51,7 @@
 							<td align="center">
 								<sf:select path="region" id="region">
 									<c:forEach var="region" items="${regions}">
-										<sf:option value="${region.getRegion()}">${region.getView()}</sf:option>
+										<sf:option value="${region.getRegion()}"/>
 									</c:forEach>
 								</sf:select>
 							</td>
@@ -92,7 +92,7 @@
 				    <td align="center">${passport.getId()}</td>
 				    <td align="center">${passport.getIdOwner()}</td>
 				    <td align="center">${passport.getNameOwner()}</td>
-				    <td align="center">${regions[0].getRegion(passport.getRegion()).getView()}</td>
+				    <td align="center">${regions[0].getRegion(passport.getRegion()).getRegion()}</td>
 				    <td align="center">${passport.getCadastrNumber()}</td>
 				    <td align="center">${passport.getArea()}</td>
 				    <td align="center">${types[0].getTypeOf(passport.getType().getType())}</td>

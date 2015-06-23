@@ -165,11 +165,8 @@ public class CompanyController {
 		
 		HttpSession session = getSession();
 		
-		//Преобразование русского текста в комментарии к паспорту
-		String name = new String (organizationInfo.getName().getBytes ("ISO-8859-1"),"Cp1251");
-		organizationInfo.setName(name);
-		String address = new String (organizationInfo.getAddress().getBytes ("ISO-8859-1"),"Cp1251");
-		organizationInfo.setAddress(address);
+		//Преобразование русского текста в имени организации и в адресе
+		organizationInfo = encodeOrganization(organizationInfo);
 		
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
@@ -192,7 +189,7 @@ public class CompanyController {
 			return "redirect:/organization/company/change_organization_info";
 		}
 	}
-	
+
 	/**
 	 * Показать журнал событий связанных с организации
 	 * @param model - список для отображения данных на странице
@@ -268,5 +265,31 @@ public class CompanyController {
 	private HttpSession getSession() {
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		return attr.getRequest().getSession(true); // true == allow create
+	}
+	
+	/**
+	 * Декодировать все поля организации (на случай русских символов)
+	 * @param passport - оригинальная организация
+	 * @return - организация с преобразованными (декодированными) полями
+	 */
+	private OrganizationInfo encodeOrganization(OrganizationInfo organizationInfo) {
+		organizationInfo.setName(encodeToCp1251(organizationInfo.getName()));
+		organizationInfo.setAddress(encodeToCp1251(organizationInfo.getAddress()));
+		return organizationInfo;
+	}
+	
+	/**
+	 * Перекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (для руских символов)
+	 * @param origin - оригенальная строка
+	 * @return - преобразованная строка
+	 */
+	private String encodeToCp1251(String origin) {
+		String converted = null;
+		try {
+			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+		}
+		return converted;
 	}
 }

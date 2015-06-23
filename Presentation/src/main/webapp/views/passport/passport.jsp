@@ -28,7 +28,7 @@
 				
 				<tr>
 					<td>Район поля: </td>
-					<td>${regions[0].getRegion(reviewingPassport.getRegion()).getView()}</td>
+					<td>${regions[0].getRegion(reviewingPassport.getRegion()).getRegion()}</td>
 				</tr>
 				
 				<tr>

@@ -49,7 +49,7 @@
 				  <tr height="40">
 				    <td align="center">${passport.getId()}</td>
 				    <td align="center">${passport.getNameOwner()}</td>
-				    <td align="center">${regions[0].getRegion(passport.getRegion()).getView()}</td>
+				    <td align="center">${regions[0].getRegion(passport.getRegion()).getRegion()}</td>
 				    <td align="center">${passport.getCadastrNumber()}</td>
 				    <td align="center">${passport.getArea()}</td>
 				    <td align="center">${types[0].getTypeOf(passport.getType()).getType()}</td>

@@ -32,7 +32,7 @@
 								<td>
 									<sf:select path="region" id="region">
 										<c:forEach var="region" items="${regions}">
-											<sf:option value="${region.getRegion()}">${region.getView()}</sf:option>
+											<sf:option value="${region.getRegion()}"/>
 										</c:forEach>
 									</sf:select>
 								</td>

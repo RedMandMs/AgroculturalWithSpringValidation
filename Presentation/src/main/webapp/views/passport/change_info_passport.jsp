@@ -46,11 +46,10 @@
 							<td>
 								<sf:select path="region" id="region">
 									<c:forEach var="region" items="${regions}">
-										<sf:option value="${region.getRegion()}">${region.getView()}</sf:option>
+										<sf:option value="${region.getRegion()}"/>
 									</c:forEach>
 								</sf:select>
 							</td>
-							<%-- <td><sf:input path="region" size="20" id="region" value="${changedPassport.getRegion()}"/></td> --%> 
 						</tr>
 						
 						<tr>

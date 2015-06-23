@@ -12,75 +12,75 @@ public enum RegionField implements Serializable{
 	/**
 	 * Регион не указан (при поиске)
 	 */
-	NULL(null, " "),
+	NULL(""),
 	/**
 	 * Регион не указан (при создании)
 	 */
-	UNKNOWN("Neizv", "Неизвестно"),
+	UNKNOWN("Неизвестно"),
 	/**
 	 * Всеволожский район
 	 */
-	VSEVOLOGSKIY("vsevologskiy", "Всеволожский район"),
+	VSEVOLOGSKIY("Всеволожский район"),
 	/**
 	 * Приозерский район
 	 */
-	PRIZEMSKIY("Prizemskiy", "Приозерский район"),
+	PRIZEMSKIY("Приозерский район"),
 	/**
 	 * Волосовский район
 	 */
-	VOLOSOVSKIY("volosovskiy", "Волосовский район"),
+	VOLOSOVSKIY("Волосовский район"),
 	/**
 	 * Волховский район
 	 */
-	VOLHOVSKIY("volhovskiy", "Волховский район"),
+	VOLHOVSKIY("Волховский район"),
 	/**
 	 * Выборгский район
 	 */
-	VIBORSKIY("viborskiy", "Выборгский район"),
+	VIBORSKIY("Выборгский район"),
 	/**
 	 * Гатчинский район
 	 */
-	GATCHINSKIY("gatchinskiy", "Гатчинский район"),
+	GATCHINSKIY("Гатчинский район"),
 	/**
 	 * Кингисеппский район
 	 */
-	KINGISEPPSKIY("kingiseppskiy", "Кингисеппский район"),
+	KINGISEPPSKIY("Кингисеппский район"),
 	/**
 	 * Киришский район
 	 */
-	KIRISHSKIY("kirishskiy", "Киришский район"),
+	KIRISHSKIY("Киришский район"),
 	/**
 	 * Кировский район
 	 */
-	KIROVVSKIY("kirovskiy", "Кировский район"),
+	KIROVVSKIY("Кировский район"),
 	/**
 	 * Ломоносовский район
 	 */
-	LOMONOSOVSKIY("lomonosovskiy", "Ломоносовский район"),
+	LOMONOSOVSKIY("Ломоносовский район"),
 	/**
 	 * Лужский район
 	 */
-	LUZHSKIY("luzhskiy", "Лужский район"),
+	LUZHSKIY("Лужский район"),
 	/**
 	 * Подпорожский район
 	 */
-	PODPOROZHSKIY("podporozhskiy", "Подпорожский район"),
+	PODPOROZHSKIY("Подпорожский район"),
 	/**
 	 * Сланцевский район
 	 */
-	SLANCEVSKIY("slancevskiy", "Сланцевский район"),
+	SLANCEVSKIY("Сланцевский район"),
 	/**
 	 * Тихвинский район
 	 */
-	TIHOVSKIY("tihovskiy", "Тихвинский район"),
+	TIHOVSKIY("Тихвинский район"),
 	/**
 	 * Тосненский район
 	 */
-	TOSNENSKIY("tosnenskiy", "Тосненский район"),
+	TOSNENSKIY("Тосненский район"),
 	/**
 	 * Бокситогорский район
 	 */
-	BOKSITOGORSKIY("boksitogorskiy", "Бокситогорский район");
+	BOKSITOGORSKIY("Бокситогорский район");
 	
 	
 	/**
@@ -88,9 +88,8 @@ public enum RegionField implements Serializable{
 	 * @param region - регион
 	 * @param view - регион для отображения
 	 */
-	private RegionField(String region, String view){
+	private RegionField(String region){
 		this.region = region;
-		this.view = view;
 	}
 	
 	/**
@@ -113,11 +112,6 @@ public enum RegionField implements Serializable{
 	 * Имя региона
 	 */
 	private String region;
-
-	/**
-	 * Отображаемое имя
-	 */
-	private String view;
 	
 	/**
 	 * Получить название региона
@@ -127,12 +121,8 @@ public enum RegionField implements Serializable{
 		return region;
 	}
 
-	/**
-	 * Получить отображаемое имя региона
-	 * @return - отображаемое имя региона
-	 */
-	public String getView() {
-		return view;
+	@Override
+	public String toString() {
+		return region;
 	}
-
 }
