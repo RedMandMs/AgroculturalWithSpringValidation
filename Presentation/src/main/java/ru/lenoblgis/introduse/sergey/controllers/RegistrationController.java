@@ -97,11 +97,6 @@ public class RegistrationController {
 		
 		HttpSession session = getSession();
 		
-		//Преобразование русского текста в комментарии к паспорту
-		String name = new String (registrationInfo.getOrganizationName().getBytes ("ISO-8859-1"),"Cp1251");
-		registrationInfo.setOrganizationName(name);;
-		String address = new String (registrationInfo.getAddress().getBytes ("ISO-8859-1"),"Cp1251");
-		registrationInfo.setAddress(address);
 		
 		//Получаем сообщения об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();

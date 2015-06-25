@@ -13,7 +13,6 @@ import org.springframework.validation.Validator;
 import ru.lenoblgis.introduse.sergey.data.dao.DAO;
 import ru.lenoblgis.introduse.sergey.datatransferobject.organizationinfo.OrganizationInfo;
 import ru.lenoblgis.introduse.sergey.domen.owner.organization.Organization;
-import ru.lenoblgis.introduse.sergey.services.OwnerService;
 
 /**
  *  дасс дл€ проверки вводимых данных при изменении данных о компании
@@ -25,7 +24,7 @@ public class OrganizationValidator implements Validator {
 	/**
 	 * Ћогер
 	 */
-	 private static final Logger log = Logger.getLogger(OwnerService.class);
+	 private static final Logger log = Logger.getLogger(OrganizationValidator.class);
 	
 	@Autowired
 	private DAO dao;
@@ -51,12 +50,8 @@ public class OrganizationValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		OrganizationInfo organization = (OrganizationInfo) target;
 		
-		//“.к. им€ должно быть уникальным, оно провер€етс€, но т.к. оно считанно с формы, то его нужно декодировать, на случай, если введены русские символы
-		try {
-			organization.setName(new String(organization.getName().getBytes("ISO-8859-1"), "Cp1251"));
-		} catch (UnsupportedEncodingException e) {
-			log.log(Level.ERROR, "unsuccessful attempt to decode name company. Exeption: " + e);
-		}
+		//ѕреобразование русского текста в имени организации и в адресе
+		organization = encodeOrganization(organization);
 		
 		//-------------ѕроверка не было ли поле названи€ оставлено пустым
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "name.empty", "Ќеобходимо ввести названние организации!");
@@ -107,4 +102,30 @@ public class OrganizationValidator implements Validator {
 		}
 	}
 
+	
+	/**
+	 * ƒекодировать все пол€ организации (на случай русских символов)
+	 * @param passport - оригинальна€ организаци€
+	 * @return - организаци€ с преобразованными (декодированными) пол€ми
+	 */
+	private OrganizationInfo encodeOrganization(OrganizationInfo organizationInfo) {
+		organizationInfo.setAddress(encodeToCp1251(organizationInfo.getAddress()));
+		organizationInfo.setName(encodeToCp1251(organizationInfo.getName()));
+		return organizationInfo;
+	}
+	
+	/**
+	 * ѕерекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (дл€ руских символов)
+	 * @param origin - оригенальна€ строка
+	 * @return - преобразованна€ строка
+	 */
+	private String encodeToCp1251(String origin) {
+		String converted = null;
+		try {
+			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+		}
+		return converted;
+	}
 }

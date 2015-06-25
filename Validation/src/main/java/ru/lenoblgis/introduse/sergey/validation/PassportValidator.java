@@ -1,7 +1,10 @@
 package ru.lenoblgis.introduse.sergey.validation;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -18,6 +21,11 @@ import ru.lenoblgis.introduse.sergey.domen.passport.Passport;
  */
 public class PassportValidator implements Validator{
 
+	/**
+	 * Ћогер
+	 */
+	 private static final Logger log = Logger.getLogger(PassportValidator.class);
+	
 	/**
 	 * DAO дл€ работы с базой данных
 	 */
@@ -47,6 +55,9 @@ public class PassportValidator implements Validator{
 		
 	        PassportInfo passportInfo = (PassportInfo) target;
 
+	      //ѕреобразование русского текста
+	        passportInfo = encodeAllPassportFields(passportInfo);
+	        
 	        //-------------ѕроверка на положительность кадастрового номера
 	        if (passportInfo.getCadastrNumber() != null) {
 	        	if(passportInfo.getCadastrNumber() <= 0){
@@ -96,6 +107,38 @@ public class PassportValidator implements Validator{
         	if(passportInfo.getRegion().trim().equals("")){
         		errors.rejectValue("region", "region.isNotChoose", "Ќеобходимо выбрать –егион!");
         	}
+	}
+	
+	/**
+	 * ƒекодировать все пол€ паспорта (на случай русских символов)
+	 * @param passport - оригенальный паспорт
+	 * @return - паспорт с преобразованными (декодированными) пол€ми
+	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
+	 */
+	private PassportInfo encodeAllPassportFields(PassportInfo passport){
+		if(passport.getNameOwner() != null){
+			passport.setNameOwner(encodeToCp1251(passport.getNameOwner()));
+		}
+		passport.setComment(encodeToCp1251(passport.getComment()));
+		passport.setRegion(encodeToCp1251(passport.getRegion()));
+		passport.setType(encodeToCp1251(passport.getType()));
+		return passport;
+	}
+	
+	/**
+	 * ѕерекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (дл€ руских символов)
+	 * @param origin - оригенальна€ строка
+	 * @return - преобразованна€ строка
+	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
+	 */
+	private String encodeToCp1251(String origin){
+		String converted = null;
+		try {
+			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+		}
+		return converted;
 	}
 
 }

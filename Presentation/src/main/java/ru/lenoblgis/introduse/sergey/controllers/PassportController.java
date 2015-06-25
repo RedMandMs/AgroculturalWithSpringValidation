@@ -155,9 +155,6 @@ public class PassportController {
 			
 			HttpSession session = getSession();
 			
-			//ѕреобразование русского текста
-			changedPassport = encodeAllPassportFields(changedPassport);
-			
 			//ѕолучаем сообщени€ об ошибках, если они есть
 			List<ObjectError> erorList = result.getAllErrors();
 			List<String> erorMessageList = new ArrayList<>();
@@ -232,9 +229,6 @@ public class PassportController {
 		log.log(Level.INFO, DateTime.now() + "	User trying create passport(" + createdPassport + ")");
 		
 		HttpSession session = getSession();
-		
-		//ѕреобразование русского текста
-		createdPassport = encodeAllPassportFields(createdPassport);
 		
 		//ѕолучаем сообщени€ об ошибках, если они есть
 		List<ObjectError> erorList = result.getAllErrors();
@@ -386,38 +380,5 @@ public class PassportController {
 		}
 		
 		return messages;
-	}
-	
-	/**
-	 * ƒекодировать все пол€ паспорта (на случай русских символов)
-	 * @param passport - оригенальный паспорт
-	 * @return - паспорт с преобразованными (декодированными) пол€ми
-	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
-	 */
-	private PassportInfo encodeAllPassportFields(PassportInfo passport) throws UnsupportedEncodingException{
-		if(passport.getNameOwner() != null){
-			passport.setNameOwner(encodeToCp1251(passport.getNameOwner()));
-		}
-		passport.setComment(encodeToCp1251(passport.getComment()));
-		passport.setRegion(encodeToCp1251(passport.getRegion()));
-		passport.setType(encodeToCp1251(passport.getType()));
-		return passport;
-	}
-	
-	/**
-	 * ѕерекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (дл€ руских символов)
-	 * @param origin - оригенальна€ строка
-	 * @return - преобразованна€ строка
-	 * @throws UnsupportedEncodingException - неудалось преобразовать текст 
-	 */
-	private String encodeToCp1251(String origin) throws UnsupportedEncodingException{
-		String converted = null;
-		try {
-			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
-		} catch (UnsupportedEncodingException e) {
-			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
-			throw e;
-		}
-		return converted;
 	}
 }

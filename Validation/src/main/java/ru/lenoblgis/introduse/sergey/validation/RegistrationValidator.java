@@ -1,7 +1,10 @@
 package ru.lenoblgis.introduse.sergey.validation;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -19,6 +22,14 @@ import ru.lenoblgis.introduse.sergey.domen.user.User;
  */
 public class RegistrationValidator implements Validator {
 
+	/**
+	 * Логер
+	 */
+	 private static final Logger log = Logger.getLogger(RegistrationValidator.class);
+	
+	/**
+	 * DAO для работы с БД
+	 */
 	@Autowired
 	private DAO dao;
 	
@@ -48,6 +59,9 @@ public class RegistrationValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		
 		RegistrationInfo registrationInfo = (RegistrationInfo) target;
+		
+		//Преобразование русского текста в регистрационной информации
+		registrationInfo = encodeRegistarionInfo(registrationInfo);
 		
 		//-------------Проверка не было ли поле логина оставлено пустым
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login", "login.empty", "Необходимо ввести логин!");
@@ -128,6 +142,32 @@ public class RegistrationValidator implements Validator {
 			}
 		}
 		
+	}
+	
+	/**
+	 * Декодировать все поля информации для регистрации (на случай русских символов)
+	 * @param passport - оригинальная организация
+	 * @return - организация с преобразованными (декодированными) полями
+	 */
+	private RegistrationInfo encodeRegistarionInfo(RegistrationInfo registrationInfo) {
+		registrationInfo.setAddress(encodeToCp1251(registrationInfo.getAddress()));
+		registrationInfo.setOrganizationName(encodeToCp1251(registrationInfo.getOrganizationName()));
+		return registrationInfo;
+	}
+	
+	/**
+	 * Перекодировка текса с JSP страниц из ISO-8859-1 в Cp1251 (для руских символов)
+	 * @param origin - оригенальная строка
+	 * @return - преобразованная строка
+	 */
+	private String encodeToCp1251(String origin) {
+		String converted = null;
+		try {
+			converted = new String(origin.getBytes("ISO-8859-1"), "Cp1251");
+		} catch (UnsupportedEncodingException e) {
+			log.log(Level.ERROR, "unsuccessful attempt to decode text. Exeption: " + e);
+		}
+		return converted;
 	}
 
 }
