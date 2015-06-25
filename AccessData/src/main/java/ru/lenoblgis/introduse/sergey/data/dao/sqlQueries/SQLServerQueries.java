@@ -11,15 +11,15 @@ public class SQLServerQueries implements SQLQueries {
 	/**
 	 * Ќазвание таблицы с организаци€ми
 	 */
-	public final static String NAME_ORG_TABLE = "organization_table";
+	public final static String NAME_ORG_TABLE = "organizations";
 	/**
 	 * Ќазвание таблицы с паспортами полей
 	 */
-	public final static String NAME_FIELD_TABLE = "field_table";
+	public final static String NAME_FIELD_TABLE = "passports";
 	/**
 	 * Ќазвание таблицы с событи€ми паспортов
 	 */
-	public final static String NAME_EVENT_TABLE = "event_passport_table";
+	public final static String NAME_EVENT_TABLE = "events";
 	/**
 	 * Ќазвание таблицы с пользовател€ми
 	 */
